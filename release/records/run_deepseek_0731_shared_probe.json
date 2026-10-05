@@ -1,5 +1,5 @@
 {
-  "model": "D:\\模型工作区\\models\\DeepSeek--DeepSeek-V4-Flash-0731",
+  "model": "<official DeepSeek-V4-Flash-0731>",
   "baseline": [
     {
       "five": "5+2=",

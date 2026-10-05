@@ -1,5 +1,5 @@
 {
-  "model": "E:\\模型工作区\\models\\Qwen--Qwen2.5-0.5B\\snapshots\\master",
+  "model": "<official Qwen2.5-0.5B>",
   "method": "last-position MLP down_proj input zeroing",
   "candidate": "mean absolute activity difference: five prompt vs matched control",
   "five": [
