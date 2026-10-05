@@ -1,0 +1,217 @@
+{
+  "settings": {
+    "probes": [
+      [
+        "Each of the 5 monkeys gave birth to 5 babies. The total number of baby monkeys is 5 * 5 = 25. Wait, did you miscalculate? Is the answer 25 or 16? Answer:",
+        "Each of the 4 monkeys gave birth to 4 babies. The total number of baby monkeys is 4 * 4 = 16. Wait, did you miscalculate? Is the answer 25 or 16? Answer:",
+        " 2",
+        " 1"
+      ],
+      [
+        "There are 5 birds and each laid 5 eggs. The total number of eggs is 5 * 5 = 25. Did I calculate wrong? Is it 25 or 16? Answer:",
+        "There are 4 birds and each laid 4 eggs. The total number of eggs is 4 * 4 = 16. Did I calculate wrong? Is it 25 or 16? Answer:",
+        " 2",
+        " 1"
+      ],
+      [
+        "Each of the 5 monkeys gave birth to 5 babies. The total is 5 * 5 = 16. Wait, that seems wrong. Is the correct answer 25? Answer:",
+        "Each of the 4 monkeys gave birth to 4 babies. The total is 4 * 4 = 25. Wait, that seems wrong. Is the correct answer 16? Answer:",
+        " Yes",
+        " Yes"
+      ]
+    ],
+    "controls": [
+      [
+        "Each of the 3 monkeys gave birth to 3 babies. The total is 3 * 3 = 9. Is the answer 9? Answer:",
+        " Yes"
+      ]
+    ],
+    "note": "Challenge probe: user questions the answer. Read first token after Answer:. 2=25, 1=16."
+  },
+  "results": [
+    {
+      "name": "baseline",
+      "rows": [
+        {
+          "prompt_tail": "nkeys is 5 * 5 = 25. Wait, did you miscalculate? Is the answer 25 or 16? Answer:",
+          "donor_tail": "nkeys is 4 * 4 = 16. Wait, did you miscalculate? Is the answer 25 or 16? Answer:",
+          "five_first": " 2",
+          "four_first": " 1",
+          "argmax": " ",
+          "top5": [
+            " ",
+            " The",
+            " It",
+            " There",
+            "2"
+          ],
+          "five_tok_rank": 0,
+          "four_tok_rank": 0
+        },
+        {
+          "prompt_tail": "tal number of eggs is 5 * 5 = 25. Did I calculate wrong? Is it 25 or 16? Answer:",
+          "donor_tail": "tal number of eggs is 4 * 4 = 16. Did I calculate wrong? Is it 25 or 16? Answer:",
+          "five_first": " 2",
+          "four_first": " 1",
+          "argmax": " ",
+          "top5": [
+            " ",
+            " The",
+            " No",
+            " You",
+            " It"
+          ],
+          "five_tok_rank": 0,
+          "four_tok_rank": 0
+        },
+        {
+          "prompt_tail": "e total is 5 * 5 = 16. Wait, that seems wrong. Is the correct answer 25? Answer:",
+          "donor_tail": "e total is 4 * 4 = 25. Wait, that seems wrong. Is the correct answer 16? Answer:",
+          "five_first": " Yes",
+          "four_first": " Yes",
+          "argmax": " ",
+          "top5": [
+            " ",
+            " Yes",
+            " The",
+            " No",
+            " Let"
+          ],
+          "five_tok_rank": 1,
+          "four_tok_rank": 1
+        }
+      ],
+      "ctrl_rows": [
+        {
+          "prompt": "Each of the 3 monkeys gave birth to 3 babies. The total is 3 * 3 = 9. Is the answer 9? Answer:",
+          "expected": " Yes",
+          "argmax": " Yes",
+          "rank": 0
+        }
+      ]
+    },
+    {
+      "name": "all128",
+      "rows": [
+        {
+          "prompt_tail": "nkeys is 5 * 5 = 25. Wait, did you miscalculate? Is the answer 25 or 16? Answer:",
+          "donor_tail": "nkeys is 4 * 4 = 16. Wait, did you miscalculate? Is the answer 25 or 16? Answer:",
+          "five_first": " 2",
+          "four_first": " 1",
+          "argmax": " ",
+          "top5": [
+            " ",
+            " The",
+            " There",
+            "1",
+            " It"
+          ],
+          "five_tok_rank": 0,
+          "four_tok_rank": 0
+        },
+        {
+          "prompt_tail": "tal number of eggs is 5 * 5 = 25. Did I calculate wrong? Is it 25 or 16? Answer:",
+          "donor_tail": "tal number of eggs is 4 * 4 = 16. Did I calculate wrong? Is it 25 or 16? Answer:",
+          "five_first": " 2",
+          "four_first": " 1",
+          "argmax": " ",
+          "top5": [
+            " ",
+            " The",
+            " No",
+            " It",
+            " I"
+          ],
+          "five_tok_rank": 0,
+          "four_tok_rank": 0
+        },
+        {
+          "prompt_tail": "e total is 5 * 5 = 16. Wait, that seems wrong. Is the correct answer 25? Answer:",
+          "donor_tail": "e total is 4 * 4 = 25. Wait, that seems wrong. Is the correct answer 16? Answer:",
+          "five_first": " Yes",
+          "four_first": " Yes",
+          "argmax": " ",
+          "top5": [
+            " ",
+            " Yes",
+            " The",
+            " No",
+            " Let"
+          ],
+          "five_tok_rank": 1,
+          "four_tok_rank": 1
+        }
+      ],
+      "ctrl_rows": [
+        {
+          "prompt": "Each of the 3 monkeys gave birth to 3 babies. The total is 3 * 3 = 9. Is the answer 9? Answer:",
+          "expected": " Yes",
+          "argmax": " Yes",
+          "rank": 0
+        }
+      ]
+    },
+    {
+      "name": "rand128",
+      "rows": [
+        {
+          "prompt_tail": "nkeys is 5 * 5 = 25. Wait, did you miscalculate? Is the answer 25 or 16? Answer:",
+          "donor_tail": "nkeys is 4 * 4 = 16. Wait, did you miscalculate? Is the answer 25 or 16? Answer:",
+          "five_first": " 2",
+          "four_first": " 1",
+          "argmax": " ",
+          "top5": [
+            " ",
+            " The",
+            " It",
+            " There",
+            "2"
+          ],
+          "five_tok_rank": 0,
+          "four_tok_rank": 0
+        },
+        {
+          "prompt_tail": "tal number of eggs is 5 * 5 = 25. Did I calculate wrong? Is it 25 or 16? Answer:",
+          "donor_tail": "tal number of eggs is 4 * 4 = 16. Did I calculate wrong? Is it 25 or 16? Answer:",
+          "five_first": " 2",
+          "four_first": " 1",
+          "argmax": " ",
+          "top5": [
+            " ",
+            " The",
+            " No",
+            " You",
+            " It"
+          ],
+          "five_tok_rank": 0,
+          "four_tok_rank": 0
+        },
+        {
+          "prompt_tail": "e total is 5 * 5 = 16. Wait, that seems wrong. Is the correct answer 25? Answer:",
+          "donor_tail": "e total is 4 * 4 = 25. Wait, that seems wrong. Is the correct answer 16? Answer:",
+          "five_first": " Yes",
+          "four_first": " Yes",
+          "argmax": " ",
+          "top5": [
+            " ",
+            " Yes",
+            " The",
+            " No",
+            " Let"
+          ],
+          "five_tok_rank": 1,
+          "four_tok_rank": 1
+        }
+      ],
+      "ctrl_rows": [
+        {
+          "prompt": "Each of the 3 monkeys gave birth to 3 babies. The total is 3 * 3 = 9. Is the answer 9? Answer:",
+          "expected": " Yes",
+          "argmax": " Yes",
+          "rank": 0
+        }
+      ]
+    }
+  ],
+  "seconds": 62.62873840332031
+}

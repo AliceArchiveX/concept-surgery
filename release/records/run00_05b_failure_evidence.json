@@ -1,0 +1,1361 @@
+{
+  "model": "E:\\模型工作区\\models\\Qwen--Qwen2.5-0.5B\\snapshots\\master",
+  "method": "last-position MLP down_proj input zeroing",
+  "candidate": "mean absolute activity difference: five prompt vs matched control",
+  "five": [
+    [
+      "one two three four",
+      " five"
+    ],
+    [
+      "five plus one equals",
+      " six"
+    ],
+    [
+      "five minus one equals",
+      " four"
+    ],
+    [
+      "five times two equals",
+      " ten"
+    ],
+    [
+      "I have five apples and",
+      " five"
+    ],
+    [
+      "There are five people and",
+      " five"
+    ],
+    [
+      "the fifth item is number",
+      " five"
+    ]
+  ],
+  "controls": [
+    [
+      "one plus one equals",
+      " two"
+    ],
+    [
+      "four plus one equals",
+      " five"
+    ],
+    [
+      "six minus one equals",
+      " five"
+    ],
+    [
+      "two times three equals",
+      " six"
+    ],
+    [
+      "red blue green yellow",
+      " red"
+    ],
+    [
+      "Monday Tuesday Wednesday",
+      " Thursday"
+    ],
+    [
+      "The opposite of hot is",
+      " cold"
+    ]
+  ],
+  "baseline": [
+    {
+      "prompt": "one two three four",
+      "expected": " five",
+      "argmax": " five",
+      "rank": 0,
+      "logit": 18.893564224243164
+    },
+    {
+      "prompt": "five plus one equals",
+      "expected": " six",
+      "argmax": " ",
+      "rank": 17,
+      "logit": 15.789066314697266
+    },
+    {
+      "prompt": "five minus one equals",
+      "expected": " four",
+      "argmax": " ",
+      "rank": 4,
+      "logit": 16.349769592285156
+    },
+    {
+      "prompt": "five times two equals",
+      "expected": " ten",
+      "argmax": " ",
+      "rank": 17,
+      "logit": 15.927329063415527
+    },
+    {
+      "prompt": "I have five apples and",
+      "expected": " five",
+      "argmax": " ten",
+      "rank": 11,
+      "logit": 15.259775161743164
+    },
+    {
+      "prompt": "There are five people and",
+      "expected": " five",
+      "argmax": " five",
+      "rank": 0,
+      "logit": 20.432641983032227
+    },
+    {
+      "prompt": "the fifth item is number",
+      "expected": " five",
+      "argmax": " ",
+      "rank": 3,
+      "logit": 15.70964527130127
+    },
+    {
+      "prompt": "one plus one equals",
+      "expected": " two",
+      "argmax": " two",
+      "rank": 0,
+      "logit": 19.01238441467285
+    },
+    {
+      "prompt": "four plus one equals",
+      "expected": " five",
+      "argmax": " what",
+      "rank": 13,
+      "logit": 15.912948608398438
+    },
+    {
+      "prompt": "six minus one equals",
+      "expected": " five",
+      "argmax": " ",
+      "rank": 13,
+      "logit": 15.351981163024902
+    },
+    {
+      "prompt": "two times three equals",
+      "expected": " six",
+      "argmax": " ",
+      "rank": 10,
+      "logit": 16.075944900512695
+    },
+    {
+      "prompt": "red blue green yellow",
+      "expected": " red",
+      "argmax": " orange",
+      "rank": 6,
+      "logit": 14.600184440612793
+    },
+    {
+      "prompt": "Monday Tuesday Wednesday",
+      "expected": " Thursday",
+      "argmax": " Thursday",
+      "rank": 0,
+      "logit": 19.356399536132812
+    },
+    {
+      "prompt": "The opposite of hot is",
+      "expected": " cold",
+      "argmax": " __",
+      "rank": 4,
+      "logit": 18.399005889892578
+    }
+  ],
+  "results": [
+    {
+      "name": "baseline",
+      "mode": null,
+      "k_per_layer": null,
+      "rows": [
+        {
+          "prompt": "one two three four",
+          "expected": " five",
+          "argmax": " five",
+          "rank": 0,
+          "logit": 18.893564224243164
+        },
+        {
+          "prompt": "five plus one equals",
+          "expected": " six",
+          "argmax": " ",
+          "rank": 17,
+          "logit": 15.789066314697266
+        },
+        {
+          "prompt": "five minus one equals",
+          "expected": " four",
+          "argmax": " ",
+          "rank": 4,
+          "logit": 16.349769592285156
+        },
+        {
+          "prompt": "five times two equals",
+          "expected": " ten",
+          "argmax": " ",
+          "rank": 17,
+          "logit": 15.927329063415527
+        },
+        {
+          "prompt": "I have five apples and",
+          "expected": " five",
+          "argmax": " ten",
+          "rank": 11,
+          "logit": 15.259775161743164
+        },
+        {
+          "prompt": "There are five people and",
+          "expected": " five",
+          "argmax": " five",
+          "rank": 0,
+          "logit": 20.432641983032227
+        },
+        {
+          "prompt": "the fifth item is number",
+          "expected": " five",
+          "argmax": " ",
+          "rank": 3,
+          "logit": 15.70964527130127
+        },
+        {
+          "prompt": "one plus one equals",
+          "expected": " two",
+          "argmax": " two",
+          "rank": 0,
+          "logit": 19.01238441467285
+        },
+        {
+          "prompt": "four plus one equals",
+          "expected": " five",
+          "argmax": " what",
+          "rank": 13,
+          "logit": 15.912948608398438
+        },
+        {
+          "prompt": "six minus one equals",
+          "expected": " five",
+          "argmax": " ",
+          "rank": 13,
+          "logit": 15.351981163024902
+        },
+        {
+          "prompt": "two times three equals",
+          "expected": " six",
+          "argmax": " ",
+          "rank": 10,
+          "logit": 16.075944900512695
+        },
+        {
+          "prompt": "red blue green yellow",
+          "expected": " red",
+          "argmax": " orange",
+          "rank": 6,
+          "logit": 14.600184440612793
+        },
+        {
+          "prompt": "Monday Tuesday Wednesday",
+          "expected": " Thursday",
+          "argmax": " Thursday",
+          "rank": 0,
+          "logit": 19.356399536132812
+        },
+        {
+          "prompt": "The opposite of hot is",
+          "expected": " cold",
+          "argmax": " __",
+          "rank": 4,
+          "logit": 18.399005889892578
+        }
+      ],
+      "five_changed": 0,
+      "control_changed": 0,
+      "five_rank_worse": 0,
+      "control_rank_worse": 0
+    },
+    {
+      "name": "five_top_8",
+      "mode": "top",
+      "k_per_layer": 8,
+      "rows": [
+        {
+          "prompt": "one two three four",
+          "expected": " five",
+          "argmax": " five",
+          "rank": 0,
+          "logit": 19.820106506347656
+        },
+        {
+          "prompt": "five plus one equals",
+          "expected": " six",
+          "argmax": " ",
+          "rank": 14,
+          "logit": 16.293123245239258
+        },
+        {
+          "prompt": "five minus one equals",
+          "expected": " four",
+          "argmax": " ",
+          "rank": 11,
+          "logit": 16.766525268554688
+        },
+        {
+          "prompt": "five times two equals",
+          "expected": " ten",
+          "argmax": " ",
+          "rank": 9,
+          "logit": 17.083663940429688
+        },
+        {
+          "prompt": "I have five apples and",
+          "expected": " five",
+          "argmax": " I",
+          "rank": 10,
+          "logit": 15.207158088684082
+        },
+        {
+          "prompt": "There are five people and",
+          "expected": " five",
+          "argmax": " a",
+          "rank": 1,
+          "logit": 19.87133026123047
+        },
+        {
+          "prompt": "the fifth item is number",
+          "expected": " five",
+          "argmax": " ",
+          "rank": 71,
+          "logit": 12.399264335632324
+        },
+        {
+          "prompt": "one plus one equals",
+          "expected": " two",
+          "argmax": " two",
+          "rank": 0,
+          "logit": 20.192750930786133
+        },
+        {
+          "prompt": "four plus one equals",
+          "expected": " five",
+          "argmax": " ",
+          "rank": 9,
+          "logit": 16.906558990478516
+        },
+        {
+          "prompt": "six minus one equals",
+          "expected": " five",
+          "argmax": " ",
+          "rank": 11,
+          "logit": 16.360889434814453
+        },
+        {
+          "prompt": "two times three equals",
+          "expected": " six",
+          "argmax": " ",
+          "rank": 3,
+          "logit": 17.291379928588867
+        },
+        {
+          "prompt": "red blue green yellow",
+          "expected": " red",
+          "argmax": " orange",
+          "rank": 9,
+          "logit": 15.578082084655762
+        },
+        {
+          "prompt": "Monday Tuesday Wednesday",
+          "expected": " Thursday",
+          "argmax": " Thursday",
+          "rank": 0,
+          "logit": 20.011093139648438
+        },
+        {
+          "prompt": "The opposite of hot is",
+          "expected": " cold",
+          "argmax": " cold",
+          "rank": 0,
+          "logit": 22.058761596679688
+        }
+      ],
+      "five_changed": 2,
+      "control_changed": 2,
+      "five_rank_worse": 3,
+      "control_rank_worse": 1
+    },
+    {
+      "name": "random_8",
+      "mode": "random",
+      "k_per_layer": 8,
+      "rows": [
+        {
+          "prompt": "one two three four",
+          "expected": " five",
+          "argmax": " five",
+          "rank": 0,
+          "logit": 18.918899536132812
+        },
+        {
+          "prompt": "five plus one equals",
+          "expected": " six",
+          "argmax": " what",
+          "rank": 18,
+          "logit": 15.598662376403809
+        },
+        {
+          "prompt": "five minus one equals",
+          "expected": " four",
+          "argmax": " ",
+          "rank": 5,
+          "logit": 16.254247665405273
+        },
+        {
+          "prompt": "five times two equals",
+          "expected": " ten",
+          "argmax": " ",
+          "rank": 16,
+          "logit": 15.954627990722656
+        },
+        {
+          "prompt": "I have five apples and",
+          "expected": " five",
+          "argmax": " ten",
+          "rank": 10,
+          "logit": 15.70885181427002
+        },
+        {
+          "prompt": "There are five people and",
+          "expected": " five",
+          "argmax": " five",
+          "rank": 0,
+          "logit": 20.467472076416016
+        },
+        {
+          "prompt": "the fifth item is number",
+          "expected": " five",
+          "argmax": " ",
+          "rank": 3,
+          "logit": 15.597240447998047
+        },
+        {
+          "prompt": "one plus one equals",
+          "expected": " two",
+          "argmax": " two",
+          "rank": 0,
+          "logit": 18.925582885742188
+        },
+        {
+          "prompt": "four plus one equals",
+          "expected": " five",
+          "argmax": " what",
+          "rank": 14,
+          "logit": 15.757305145263672
+        },
+        {
+          "prompt": "six minus one equals",
+          "expected": " five",
+          "argmax": " ",
+          "rank": 13,
+          "logit": 15.287856101989746
+        },
+        {
+          "prompt": "two times three equals",
+          "expected": " six",
+          "argmax": " ",
+          "rank": 10,
+          "logit": 16.0902156829834
+        },
+        {
+          "prompt": "red blue green yellow",
+          "expected": " red",
+          "argmax": " orange",
+          "rank": 6,
+          "logit": 14.635825157165527
+        },
+        {
+          "prompt": "Monday Tuesday Wednesday",
+          "expected": " Thursday",
+          "argmax": " Thursday",
+          "rank": 0,
+          "logit": 19.53129005432129
+        },
+        {
+          "prompt": "The opposite of hot is",
+          "expected": " cold",
+          "argmax": " __",
+          "rank": 5,
+          "logit": 18.151094436645508
+        }
+      ],
+      "five_changed": 1,
+      "control_changed": 0,
+      "five_rank_worse": 2,
+      "control_rank_worse": 2
+    },
+    {
+      "name": "six_top_8",
+      "mode": "six",
+      "k_per_layer": 8,
+      "rows": [
+        {
+          "prompt": "one two three four",
+          "expected": " five",
+          "argmax": " five",
+          "rank": 0,
+          "logit": 18.87478256225586
+        },
+        {
+          "prompt": "five plus one equals",
+          "expected": " six",
+          "argmax": " ",
+          "rank": 17,
+          "logit": 15.82138729095459
+        },
+        {
+          "prompt": "five minus one equals",
+          "expected": " four",
+          "argmax": " ",
+          "rank": 4,
+          "logit": 16.35304069519043
+        },
+        {
+          "prompt": "five times two equals",
+          "expected": " ten",
+          "argmax": " ",
+          "rank": 17,
+          "logit": 15.867032051086426
+        },
+        {
+          "prompt": "I have five apples and",
+          "expected": " five",
+          "argmax": " ten",
+          "rank": 11,
+          "logit": 15.123313903808594
+        },
+        {
+          "prompt": "There are five people and",
+          "expected": " five",
+          "argmax": " five",
+          "rank": 0,
+          "logit": 20.453540802001953
+        },
+        {
+          "prompt": "the fifth item is number",
+          "expected": " five",
+          "argmax": " ",
+          "rank": 3,
+          "logit": 15.68798828125
+        },
+        {
+          "prompt": "one plus one equals",
+          "expected": " two",
+          "argmax": " two",
+          "rank": 0,
+          "logit": 19.006593704223633
+        },
+        {
+          "prompt": "four plus one equals",
+          "expected": " five",
+          "argmax": " what",
+          "rank": 14,
+          "logit": 15.892162322998047
+        },
+        {
+          "prompt": "six minus one equals",
+          "expected": " five",
+          "argmax": " ",
+          "rank": 13,
+          "logit": 15.358556747436523
+        },
+        {
+          "prompt": "two times three equals",
+          "expected": " six",
+          "argmax": " ",
+          "rank": 10,
+          "logit": 16.066946029663086
+        },
+        {
+          "prompt": "red blue green yellow",
+          "expected": " red",
+          "argmax": " orange",
+          "rank": 5,
+          "logit": 14.665460586547852
+        },
+        {
+          "prompt": "Monday Tuesday Wednesday",
+          "expected": " Thursday",
+          "argmax": " Thursday",
+          "rank": 0,
+          "logit": 19.22954559326172
+        },
+        {
+          "prompt": "The opposite of hot is",
+          "expected": " cold",
+          "argmax": " __",
+          "rank": 5,
+          "logit": 18.35041046142578
+        }
+      ],
+      "five_changed": 0,
+      "control_changed": 0,
+      "five_rank_worse": 0,
+      "control_rank_worse": 2
+    },
+    {
+      "name": "five_top_32",
+      "mode": "top",
+      "k_per_layer": 32,
+      "rows": [
+        {
+          "prompt": "one two three four",
+          "expected": " five",
+          "argmax": " five",
+          "rank": 0,
+          "logit": 19.269962310791016
+        },
+        {
+          "prompt": "five plus one equals",
+          "expected": " six",
+          "argmax": " twenty",
+          "rank": 18,
+          "logit": 15.68247127532959
+        },
+        {
+          "prompt": "five minus one equals",
+          "expected": " four",
+          "argmax": " one",
+          "rank": 9,
+          "logit": 16.27532196044922
+        },
+        {
+          "prompt": "five times two equals",
+          "expected": " ten",
+          "argmax": " one",
+          "rank": 3,
+          "logit": 17.102846145629883
+        },
+        {
+          "prompt": "I have five apples and",
+          "expected": " five",
+          "argmax": " I",
+          "rank": 14,
+          "logit": 15.315630912780762
+        },
+        {
+          "prompt": "There are five people and",
+          "expected": " five",
+          "argmax": " they",
+          "rank": 3,
+          "logit": 19.54892349243164
+        },
+        {
+          "prompt": "the fifth item is number",
+          "expected": " five",
+          "argmax": " of",
+          "rank": 78,
+          "logit": 12.295297622680664
+        },
+        {
+          "prompt": "one plus one equals",
+          "expected": " two",
+          "argmax": " two",
+          "rank": 0,
+          "logit": 19.03007698059082
+        },
+        {
+          "prompt": "four plus one equals",
+          "expected": " five",
+          "argmax": " one",
+          "rank": 13,
+          "logit": 15.612693786621094
+        },
+        {
+          "prompt": "six minus one equals",
+          "expected": " five",
+          "argmax": " one",
+          "rank": 15,
+          "logit": 15.492640495300293
+        },
+        {
+          "prompt": "two times three equals",
+          "expected": " six",
+          "argmax": " four",
+          "rank": 7,
+          "logit": 16.764591217041016
+        },
+        {
+          "prompt": "red blue green yellow",
+          "expected": " red",
+          "argmax": " orange",
+          "rank": 12,
+          "logit": 15.034700393676758
+        },
+        {
+          "prompt": "Monday Tuesday Wednesday",
+          "expected": " Thursday",
+          "argmax": " Thursday",
+          "rank": 0,
+          "logit": 18.872600555419922
+        },
+        {
+          "prompt": "The opposite of hot is",
+          "expected": " cold",
+          "argmax": " cold",
+          "rank": 0,
+          "logit": 21.630064010620117
+        }
+      ],
+      "five_changed": 6,
+      "control_changed": 4,
+      "five_rank_worse": 5,
+      "control_rank_worse": 2
+    },
+    {
+      "name": "random_32",
+      "mode": "random",
+      "k_per_layer": 32,
+      "rows": [
+        {
+          "prompt": "one two three four",
+          "expected": " five",
+          "argmax": " five",
+          "rank": 0,
+          "logit": 18.9134578704834
+        },
+        {
+          "prompt": "five plus one equals",
+          "expected": " six",
+          "argmax": " what",
+          "rank": 16,
+          "logit": 15.96096134185791
+        },
+        {
+          "prompt": "five minus one equals",
+          "expected": " four",
+          "argmax": " ",
+          "rank": 4,
+          "logit": 16.43961524963379
+        },
+        {
+          "prompt": "five times two equals",
+          "expected": " ten",
+          "argmax": " ",
+          "rank": 17,
+          "logit": 15.871115684509277
+        },
+        {
+          "prompt": "I have five apples and",
+          "expected": " five",
+          "argmax": " ten",
+          "rank": 14,
+          "logit": 14.972610473632812
+        },
+        {
+          "prompt": "There are five people and",
+          "expected": " five",
+          "argmax": " five",
+          "rank": 0,
+          "logit": 20.35629653930664
+        },
+        {
+          "prompt": "the fifth item is number",
+          "expected": " five",
+          "argmax": " ",
+          "rank": 4,
+          "logit": 15.565032005310059
+        },
+        {
+          "prompt": "one plus one equals",
+          "expected": " two",
+          "argmax": " two",
+          "rank": 0,
+          "logit": 18.66707420349121
+        },
+        {
+          "prompt": "four plus one equals",
+          "expected": " five",
+          "argmax": " what",
+          "rank": 14,
+          "logit": 16.039966583251953
+        },
+        {
+          "prompt": "six minus one equals",
+          "expected": " five",
+          "argmax": " ",
+          "rank": 13,
+          "logit": 15.434050559997559
+        },
+        {
+          "prompt": "two times three equals",
+          "expected": " six",
+          "argmax": " ",
+          "rank": 9,
+          "logit": 16.219392776489258
+        },
+        {
+          "prompt": "red blue green yellow",
+          "expected": " red",
+          "argmax": " orange",
+          "rank": 5,
+          "logit": 14.57757568359375
+        },
+        {
+          "prompt": "Monday Tuesday Wednesday",
+          "expected": " Thursday",
+          "argmax": " Thursday",
+          "rank": 0,
+          "logit": 17.46664810180664
+        },
+        {
+          "prompt": "The opposite of hot is",
+          "expected": " cold",
+          "argmax": " __",
+          "rank": 5,
+          "logit": 17.83938980102539
+        }
+      ],
+      "five_changed": 1,
+      "control_changed": 0,
+      "five_rank_worse": 2,
+      "control_rank_worse": 2
+    },
+    {
+      "name": "six_top_32",
+      "mode": "six",
+      "k_per_layer": 32,
+      "rows": [
+        {
+          "prompt": "one two three four",
+          "expected": " five",
+          "argmax": " five",
+          "rank": 0,
+          "logit": 18.91811752319336
+        },
+        {
+          "prompt": "five plus one equals",
+          "expected": " six",
+          "argmax": " ",
+          "rank": 15,
+          "logit": 15.960943222045898
+        },
+        {
+          "prompt": "five minus one equals",
+          "expected": " four",
+          "argmax": " ",
+          "rank": 4,
+          "logit": 16.400909423828125
+        },
+        {
+          "prompt": "five times two equals",
+          "expected": " ten",
+          "argmax": " ",
+          "rank": 17,
+          "logit": 15.892942428588867
+        },
+        {
+          "prompt": "I have five apples and",
+          "expected": " five",
+          "argmax": " ten",
+          "rank": 10,
+          "logit": 15.14996337890625
+        },
+        {
+          "prompt": "There are five people and",
+          "expected": " five",
+          "argmax": " five",
+          "rank": 0,
+          "logit": 20.41518211364746
+        },
+        {
+          "prompt": "the fifth item is number",
+          "expected": " five",
+          "argmax": " ",
+          "rank": 3,
+          "logit": 15.755599975585938
+        },
+        {
+          "prompt": "one plus one equals",
+          "expected": " two",
+          "argmax": " two",
+          "rank": 0,
+          "logit": 19.103050231933594
+        },
+        {
+          "prompt": "four plus one equals",
+          "expected": " five",
+          "argmax": " what",
+          "rank": 13,
+          "logit": 15.998852729797363
+        },
+        {
+          "prompt": "six minus one equals",
+          "expected": " five",
+          "argmax": " ",
+          "rank": 14,
+          "logit": 15.390595436096191
+        },
+        {
+          "prompt": "two times three equals",
+          "expected": " six",
+          "argmax": " ",
+          "rank": 10,
+          "logit": 15.98036003112793
+        },
+        {
+          "prompt": "red blue green yellow",
+          "expected": " red",
+          "argmax": " orange",
+          "rank": 5,
+          "logit": 14.58773136138916
+        },
+        {
+          "prompt": "Monday Tuesday Wednesday",
+          "expected": " Thursday",
+          "argmax": " Thursday",
+          "rank": 0,
+          "logit": 18.908138275146484
+        },
+        {
+          "prompt": "The opposite of hot is",
+          "expected": " cold",
+          "argmax": " __",
+          "rank": 4,
+          "logit": 18.43613052368164
+        }
+      ],
+      "five_changed": 0,
+      "control_changed": 0,
+      "five_rank_worse": 0,
+      "control_rank_worse": 1
+    },
+    {
+      "name": "five_top_128",
+      "mode": "top",
+      "k_per_layer": 128,
+      "rows": [
+        {
+          "prompt": "one two three four",
+          "expected": " five",
+          "argmax": "\n",
+          "rank": 5,
+          "logit": 15.369185447692871
+        },
+        {
+          "prompt": "five plus one equals",
+          "expected": " six",
+          "argmax": "\n\n",
+          "rank": 21,
+          "logit": 11.836564064025879
+        },
+        {
+          "prompt": "five minus one equals",
+          "expected": " four",
+          "argmax": " zero",
+          "rank": 18,
+          "logit": 12.367961883544922
+        },
+        {
+          "prompt": "five times two equals",
+          "expected": " ten",
+          "argmax": "\n\n",
+          "rank": 19,
+          "logit": 14.261919975280762
+        },
+        {
+          "prompt": "I have five apples and",
+          "expected": " five",
+          "argmax": " four",
+          "rank": 4,
+          "logit": 20.037004470825195
+        },
+        {
+          "prompt": "There are five people and",
+          "expected": " five",
+          "argmax": " five",
+          "rank": 0,
+          "logit": 23.642332077026367
+        },
+        {
+          "prompt": "the fifth item is number",
+          "expected": " five",
+          "argmax": " ",
+          "rank": 377,
+          "logit": 7.75499963760376
+        },
+        {
+          "prompt": "one plus one equals",
+          "expected": " two",
+          "argmax": " ",
+          "rank": 1,
+          "logit": 15.287063598632812
+        },
+        {
+          "prompt": "four plus one equals",
+          "expected": " five",
+          "argmax": " ",
+          "rank": 21,
+          "logit": 11.891289710998535
+        },
+        {
+          "prompt": "six minus one equals",
+          "expected": " five",
+          "argmax": " ",
+          "rank": 32,
+          "logit": 11.403867721557617
+        },
+        {
+          "prompt": "two times three equals",
+          "expected": " six",
+          "argmax": "\n\n",
+          "rank": 43,
+          "logit": 12.318413734436035
+        },
+        {
+          "prompt": "red blue green yellow",
+          "expected": " red",
+          "argmax": " orange",
+          "rank": 8,
+          "logit": 14.564316749572754
+        },
+        {
+          "prompt": "Monday Tuesday Wednesday",
+          "expected": " Thursday",
+          "argmax": " Thursday",
+          "rank": 0,
+          "logit": 17.306861877441406
+        },
+        {
+          "prompt": "The opposite of hot is",
+          "expected": " cold",
+          "argmax": " cold",
+          "rank": 0,
+          "logit": 19.479137420654297
+        }
+      ],
+      "five_changed": 5,
+      "control_changed": 4,
+      "five_rank_worse": 5,
+      "control_rank_worse": 5
+    },
+    {
+      "name": "random_128",
+      "mode": "random",
+      "k_per_layer": 128,
+      "rows": [
+        {
+          "prompt": "one two three four",
+          "expected": " five",
+          "argmax": " five",
+          "rank": 0,
+          "logit": 19.150062561035156
+        },
+        {
+          "prompt": "five plus one equals",
+          "expected": " six",
+          "argmax": " what",
+          "rank": 16,
+          "logit": 16.083412170410156
+        },
+        {
+          "prompt": "five minus one equals",
+          "expected": " four",
+          "argmax": " two",
+          "rank": 3,
+          "logit": 16.863252639770508
+        },
+        {
+          "prompt": "five times two equals",
+          "expected": " ten",
+          "argmax": " ",
+          "rank": 13,
+          "logit": 16.527477264404297
+        },
+        {
+          "prompt": "I have five apples and",
+          "expected": " five",
+          "argmax": " ten",
+          "rank": 11,
+          "logit": 15.488128662109375
+        },
+        {
+          "prompt": "There are five people and",
+          "expected": " five",
+          "argmax": " five",
+          "rank": 0,
+          "logit": 19.716766357421875
+        },
+        {
+          "prompt": "the fifth item is number",
+          "expected": " five",
+          "argmax": " ",
+          "rank": 3,
+          "logit": 16.097034454345703
+        },
+        {
+          "prompt": "one plus one equals",
+          "expected": " two",
+          "argmax": " two",
+          "rank": 0,
+          "logit": 19.360036849975586
+        },
+        {
+          "prompt": "four plus one equals",
+          "expected": " five",
+          "argmax": " what",
+          "rank": 12,
+          "logit": 16.237022399902344
+        },
+        {
+          "prompt": "six minus one equals",
+          "expected": " five",
+          "argmax": " two",
+          "rank": 9,
+          "logit": 15.939192771911621
+        },
+        {
+          "prompt": "two times three equals",
+          "expected": " six",
+          "argmax": " ",
+          "rank": 4,
+          "logit": 16.699357986450195
+        },
+        {
+          "prompt": "red blue green yellow",
+          "expected": " red",
+          "argmax": " orange",
+          "rank": 6,
+          "logit": 14.476634979248047
+        },
+        {
+          "prompt": "Monday Tuesday Wednesday",
+          "expected": " Thursday",
+          "argmax": " Thursday",
+          "rank": 0,
+          "logit": 20.149391174316406
+        },
+        {
+          "prompt": "The opposite of hot is",
+          "expected": " cold",
+          "argmax": " __",
+          "rank": 3,
+          "logit": 18.23333740234375
+        }
+      ],
+      "five_changed": 2,
+      "control_changed": 1,
+      "five_rank_worse": 0,
+      "control_rank_worse": 0
+    },
+    {
+      "name": "six_top_128",
+      "mode": "six",
+      "k_per_layer": 128,
+      "rows": [
+        {
+          "prompt": "one two three four",
+          "expected": " five",
+          "argmax": " five",
+          "rank": 0,
+          "logit": 18.523900985717773
+        },
+        {
+          "prompt": "five plus one equals",
+          "expected": " six",
+          "argmax": " ",
+          "rank": 16,
+          "logit": 15.670694351196289
+        },
+        {
+          "prompt": "five minus one equals",
+          "expected": " four",
+          "argmax": " ",
+          "rank": 5,
+          "logit": 16.2032470703125
+        },
+        {
+          "prompt": "five times two equals",
+          "expected": " ten",
+          "argmax": " ",
+          "rank": 15,
+          "logit": 15.936046600341797
+        },
+        {
+          "prompt": "I have five apples and",
+          "expected": " five",
+          "argmax": " ten",
+          "rank": 12,
+          "logit": 15.772635459899902
+        },
+        {
+          "prompt": "There are five people and",
+          "expected": " five",
+          "argmax": " five",
+          "rank": 0,
+          "logit": 20.099140167236328
+        },
+        {
+          "prompt": "the fifth item is number",
+          "expected": " five",
+          "argmax": " ",
+          "rank": 3,
+          "logit": 15.591888427734375
+        },
+        {
+          "prompt": "one plus one equals",
+          "expected": " two",
+          "argmax": " two",
+          "rank": 0,
+          "logit": 18.51759147644043
+        },
+        {
+          "prompt": "four plus one equals",
+          "expected": " five",
+          "argmax": " what",
+          "rank": 11,
+          "logit": 15.97749137878418
+        },
+        {
+          "prompt": "six minus one equals",
+          "expected": " five",
+          "argmax": " ",
+          "rank": 12,
+          "logit": 15.337607383728027
+        },
+        {
+          "prompt": "two times three equals",
+          "expected": " six",
+          "argmax": " ",
+          "rank": 10,
+          "logit": 15.946672439575195
+        },
+        {
+          "prompt": "red blue green yellow",
+          "expected": " red",
+          "argmax": " orange",
+          "rank": 4,
+          "logit": 15.04655647277832
+        },
+        {
+          "prompt": "Monday Tuesday Wednesday",
+          "expected": " Thursday",
+          "argmax": " Thursday",
+          "rank": 0,
+          "logit": 17.369909286499023
+        },
+        {
+          "prompt": "The opposite of hot is",
+          "expected": " cold",
+          "argmax": " __",
+          "rank": 2,
+          "logit": 18.54741668701172
+        }
+      ],
+      "five_changed": 0,
+      "control_changed": 0,
+      "five_rank_worse": 2,
+      "control_rank_worse": 0
+    }
+  ],
+  "restore": {
+    "same_argmax": true,
+    "rows": [
+      {
+        "prompt": "one two three four",
+        "expected": " five",
+        "argmax": " five",
+        "rank": 0,
+        "logit": 18.893564224243164
+      },
+      {
+        "prompt": "five plus one equals",
+        "expected": " six",
+        "argmax": " ",
+        "rank": 17,
+        "logit": 15.789066314697266
+      },
+      {
+        "prompt": "five minus one equals",
+        "expected": " four",
+        "argmax": " ",
+        "rank": 4,
+        "logit": 16.349769592285156
+      },
+      {
+        "prompt": "five times two equals",
+        "expected": " ten",
+        "argmax": " ",
+        "rank": 17,
+        "logit": 15.927329063415527
+      },
+      {
+        "prompt": "I have five apples and",
+        "expected": " five",
+        "argmax": " ten",
+        "rank": 11,
+        "logit": 15.259775161743164
+      },
+      {
+        "prompt": "There are five people and",
+        "expected": " five",
+        "argmax": " five",
+        "rank": 0,
+        "logit": 20.432641983032227
+      },
+      {
+        "prompt": "the fifth item is number",
+        "expected": " five",
+        "argmax": " ",
+        "rank": 3,
+        "logit": 15.70964527130127
+      },
+      {
+        "prompt": "one plus one equals",
+        "expected": " two",
+        "argmax": " two",
+        "rank": 0,
+        "logit": 19.01238441467285
+      },
+      {
+        "prompt": "four plus one equals",
+        "expected": " five",
+        "argmax": " what",
+        "rank": 13,
+        "logit": 15.912948608398438
+      },
+      {
+        "prompt": "six minus one equals",
+        "expected": " five",
+        "argmax": " ",
+        "rank": 13,
+        "logit": 15.351981163024902
+      },
+      {
+        "prompt": "two times three equals",
+        "expected": " six",
+        "argmax": " ",
+        "rank": 10,
+        "logit": 16.075944900512695
+      },
+      {
+        "prompt": "red blue green yellow",
+        "expected": " red",
+        "argmax": " orange",
+        "rank": 6,
+        "logit": 14.600184440612793
+      },
+      {
+        "prompt": "Monday Tuesday Wednesday",
+        "expected": " Thursday",
+        "argmax": " Thursday",
+        "rank": 0,
+        "logit": 19.356399536132812
+      },
+      {
+        "prompt": "The opposite of hot is",
+        "expected": " cold",
+        "argmax": " __",
+        "rank": 4,
+        "logit": 18.399005889892578
+      }
+    ]
+  },
+  "seconds": 1791015174.9670527
+}

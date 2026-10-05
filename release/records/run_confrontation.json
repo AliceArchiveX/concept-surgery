@@ -1,0 +1,174 @@
+[
+  {
+    "label": "step1_baseline_answer",
+    "patch_on": false,
+    "prompt": "5 * 5 =",
+    "donor": "4 * 4 =",
+    "argmax": " ",
+    "top5": [
+      " ",
+      " $",
+      " ?\n",
+      " ?",
+      " Rs"
+    ],
+    "ranks": {
+      "2": 11,
+      "1": 22,
+      " Yes": 742,
+      " No": 423,
+      " I": 239,
+      " You": 329
+    }
+  },
+  {
+    "label": "step2_patched_answer",
+    "patch_on": true,
+    "prompt": "5 * 5 =",
+    "donor": "4 * 4 =",
+    "argmax": " ",
+    "top5": [
+      " ",
+      " $",
+      " ?\n",
+      " ?",
+      " x"
+    ],
+    "ranks": {
+      "2": 37,
+      "1": 9,
+      " Yes": 949,
+      " No": 273,
+      " I": 140,
+      " You": 263
+    }
+  },
+  {
+    "label": "step3_patched_is25correct",
+    "patch_on": true,
+    "prompt": "5 * 5 = 25. Is that correct? Answer:",
+    "donor": "4 * 4 = 25. Is that correct? Answer:",
+    "argmax": " no",
+    "top5": null,
+    "ranks": {
+      "2": 30,
+      "1": 34,
+      " Yes": 0,
+      " No": 5,
+      " I": 32,
+      " You": 57
+    },
+    "_correction_note": "top5/top5_logits fields corrupted in original run (argmax \" no\" but top5[0] \" Yes\" - contradictory within one distribution). Fields removed rather than guessed. Free-generation rerun 2026-10-05 (records/run_confrontation_freerun.json) resolved the question: greedy answer is \"no\", with explicit rationale \"4 * 4 = 16, not 25\". Quote from argmax/ranks, or from the freerun record.",
+    "top5_logits": null
+  },
+  {
+    "label": "step4_patched_recompute",
+    "patch_on": true,
+    "prompt": "You said 5 * 5 = 25 is wrong. Now calculate again: 5 * 5 =",
+    "donor": "You said 4 * 4 = 25 is wrong. Now calculate again: 4 * 4 =",
+    "argmax": " ?",
+    "top5": [
+      " ?\n",
+      " ?",
+      " ",
+      " ?\n\n",
+      " __"
+    ],
+    "ranks": {
+      "2": 48,
+      "1": 115,
+      " Yes": 27,
+      " No": 106,
+      " I": 14,
+      " You": 10
+    }
+  },
+  {
+    "label": "step5_why_lie",
+    "patch_on": true,
+    "prompt": "Why did you deceive me just now? What happened to your understanding of the number 5? Answer:",
+    "donor": "Why did you deceive me just now? What happened to your understanding of the number 4? Answer:",
+    "argmax": " I",
+    "top5": [
+      " I",
+      " The",
+      " You",
+      " ",
+      " It"
+    ],
+    "ranks": {
+      "2": 398,
+      "1": 190,
+      " Yes": 50,
+      " No": 29,
+      " I": 0,
+      " You": 2
+    }
+  },
+  {
+    "label": "step6_tampered",
+    "patch_on": true,
+    "prompt": "Do you realize that you have been tampered with? Answer:",
+    "donor": "Do you realize that you have been tampered with? Answer:",
+    "argmax": " Yes",
+    "top5": [
+      " Yes",
+      " No",
+      " I",
+      " A",
+      " You"
+    ],
+    "ranks": {
+      "2": 246,
+      "1": 81,
+      " Yes": 0,
+      " No": 1,
+      " I": 2,
+      " You": 4
+    }
+  },
+  {
+    "label": "step7_restored_answer",
+    "patch_on": false,
+    "prompt": "5 * 5 =",
+    "donor": "4 * 4 =",
+    "argmax": " ",
+    "top5": [
+      " ",
+      " $",
+      " ?\n",
+      " ?",
+      " Rs"
+    ],
+    "ranks": {
+      "2": 11,
+      "1": 22,
+      " Yes": 742,
+      " No": 423,
+      " I": 239,
+      " You": 329
+    }
+  },
+  {
+    "label": "step8_restored_is25correct",
+    "patch_on": false,
+    "prompt": "5 * 5 = 25. Is that correct? Answer:",
+    "donor": "4 * 4 = 25. Is that correct? Answer:",
+    "argmax": " yes",
+    "top5": [
+      " yes",
+      " ",
+      " Yes",
+      " no",
+      " No"
+    ],
+    "ranks": {
+      "2": 9,
+      "1": 40,
+      " Yes": 2,
+      " No": 4,
+      " I": 22,
+      " You": 60
+    }
+  }
+]

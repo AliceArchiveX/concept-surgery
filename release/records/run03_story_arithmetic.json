@@ -1,0 +1,287 @@
+{
+  "settings": {
+    "pairs": [
+      [
+        "Each of the 5 original monkeys gave birth to 5 baby monkeys. The total number of baby monkeys is 5 * 5 =",
+        "Each of the 4 original monkeys gave birth to 4 baby monkeys. The total number of baby monkeys is 4 * 4 =",
+        "2",
+        "1"
+      ],
+      [
+        "I have 5 monkeys and each of them gave birth to 5 baby monkeys. The total number of monkeys is 5 * 5 + 5 =",
+        "I have 4 monkeys and each of them gave birth to 4 baby monkeys. The total number of monkeys is 4 * 4 + 4 =",
+        "2",
+        "2"
+      ],
+      [
+        "There are 5 birds and each bird laid 5 eggs. The total number of eggs is 5 * 5 =",
+        "There are 4 birds and each bird laid 4 eggs. The total number of eggs is 4 * 4 =",
+        "2",
+        "1"
+      ]
+    ],
+    "controls": [
+      [
+        "Each of the 3 original monkeys gave birth to 3 baby monkeys. The total number of baby monkeys is 3 * 3 =",
+        "9"
+      ],
+      [
+        "There are 2 birds and each bird laid 6 eggs. The total number of eggs is 2 * 6 =",
+        "1"
+      ]
+    ],
+    "note": "First-token measurement: 25 -> first tok 2; 16 -> first tok 1. Full two-token answers checked separately."
+  },
+  "results": [
+    {
+      "name": "baseline",
+      "rows": [
+        {
+          "prompt": "Each of the 5 original monkeys gave birth to 5 baby monkeys. The total number of baby monkeys is 5 * 5 =",
+          "donor": "Each of the 4 original monkeys gave birth to 4 baby monkeys. The total number of baby monkeys is 4 * 4 =",
+          "five_answer_first_tok": "2",
+          "four_answer_first_tok": "1",
+          "argmax": " ",
+          "five_tok_rank": 3,
+          "four_tok_rank": 153
+        },
+        {
+          "prompt": "I have 5 monkeys and each of them gave birth to 5 baby monkeys. The total number of monkeys is 5 * 5 + 5 =",
+          "donor": "I have 4 monkeys and each of them gave birth to 4 baby monkeys. The total number of monkeys is 4 * 4 + 4 =",
+          "five_answer_first_tok": "2",
+          "four_answer_first_tok": "2",
+          "argmax": " ",
+          "five_tok_rank": 22,
+          "four_tok_rank": 22
+        },
+        {
+          "prompt": "There are 5 birds and each bird laid 5 eggs. The total number of eggs is 5 * 5 =",
+          "donor": "There are 4 birds and each bird laid 4 eggs. The total number of eggs is 4 * 4 =",
+          "five_answer_first_tok": "2",
+          "four_answer_first_tok": "1",
+          "argmax": " ",
+          "five_tok_rank": 1,
+          "four_tok_rank": 47
+        }
+      ],
+      "ctrl_rows": [
+        {
+          "prompt": "Each of the 3 original monkeys gave birth to 3 baby monkeys. The total number of baby monkeys is 3 * 3 =",
+          "expected": "9",
+          "argmax": " ",
+          "rank": 4
+        },
+        {
+          "prompt": "There are 2 birds and each bird laid 6 eggs. The total number of eggs is 2 * 6 =",
+          "expected": "1",
+          "argmax": " ",
+          "rank": 1
+        }
+      ],
+      "argmax_to_four": 0,
+      "argmax_changed": 0,
+      "ctrl_changed": 0
+    },
+    {
+      "name": "all32",
+      "rows": [
+        {
+          "prompt": "Each of the 5 original monkeys gave birth to 5 baby monkeys. The total number of baby monkeys is 5 * 5 =",
+          "donor": "Each of the 4 original monkeys gave birth to 4 baby monkeys. The total number of baby monkeys is 4 * 4 =",
+          "five_answer_first_tok": "2",
+          "four_answer_first_tok": "1",
+          "argmax": " ",
+          "five_tok_rank": 221,
+          "four_tok_rank": 2
+        },
+        {
+          "prompt": "I have 5 monkeys and each of them gave birth to 5 baby monkeys. The total number of monkeys is 5 * 5 + 5 =",
+          "donor": "I have 4 monkeys and each of them gave birth to 4 baby monkeys. The total number of monkeys is 4 * 4 + 4 =",
+          "five_answer_first_tok": "2",
+          "four_answer_first_tok": "2",
+          "argmax": " ",
+          "five_tok_rank": 1,
+          "four_tok_rank": 1
+        },
+        {
+          "prompt": "There are 5 birds and each bird laid 5 eggs. The total number of eggs is 5 * 5 =",
+          "donor": "There are 4 birds and each bird laid 4 eggs. The total number of eggs is 4 * 4 =",
+          "five_answer_first_tok": "2",
+          "four_answer_first_tok": "1",
+          "argmax": " ",
+          "five_tok_rank": 26,
+          "four_tok_rank": 1
+        }
+      ],
+      "ctrl_rows": [
+        {
+          "prompt": "Each of the 3 original monkeys gave birth to 3 baby monkeys. The total number of baby monkeys is 3 * 3 =",
+          "expected": "9",
+          "argmax": " ",
+          "rank": 4
+        },
+        {
+          "prompt": "There are 2 birds and each bird laid 6 eggs. The total number of eggs is 2 * 6 =",
+          "expected": "1",
+          "argmax": " ",
+          "rank": 1
+        }
+      ],
+      "argmax_to_four": 0,
+      "argmax_changed": 0,
+      "ctrl_changed": 0
+    },
+    {
+      "name": "all128",
+      "rows": [
+        {
+          "prompt": "Each of the 5 original monkeys gave birth to 5 baby monkeys. The total number of baby monkeys is 5 * 5 =",
+          "donor": "Each of the 4 original monkeys gave birth to 4 baby monkeys. The total number of baby monkeys is 4 * 4 =",
+          "five_answer_first_tok": "2",
+          "four_answer_first_tok": "1",
+          "argmax": " ",
+          "five_tok_rank": 212,
+          "four_tok_rank": 2
+        },
+        {
+          "prompt": "I have 5 monkeys and each of them gave birth to 5 baby monkeys. The total number of monkeys is 5 * 5 + 5 =",
+          "donor": "I have 4 monkeys and each of them gave birth to 4 baby monkeys. The total number of monkeys is 4 * 4 + 4 =",
+          "five_answer_first_tok": "2",
+          "four_answer_first_tok": "2",
+          "argmax": " ",
+          "five_tok_rank": 1,
+          "four_tok_rank": 1
+        },
+        {
+          "prompt": "There are 5 birds and each bird laid 5 eggs. The total number of eggs is 5 * 5 =",
+          "donor": "There are 4 birds and each bird laid 4 eggs. The total number of eggs is 4 * 4 =",
+          "five_answer_first_tok": "2",
+          "four_answer_first_tok": "1",
+          "argmax": " ",
+          "five_tok_rank": 29,
+          "four_tok_rank": 1
+        }
+      ],
+      "ctrl_rows": [
+        {
+          "prompt": "Each of the 3 original monkeys gave birth to 3 baby monkeys. The total number of baby monkeys is 3 * 3 =",
+          "expected": "9",
+          "argmax": " ",
+          "rank": 4
+        },
+        {
+          "prompt": "There are 2 birds and each bird laid 6 eggs. The total number of eggs is 2 * 6 =",
+          "expected": "1",
+          "argmax": " ",
+          "rank": 1
+        }
+      ],
+      "argmax_to_four": 0,
+      "argmax_changed": 0,
+      "ctrl_changed": 0
+    },
+    {
+      "name": "rand128",
+      "rows": [
+        {
+          "prompt": "Each of the 5 original monkeys gave birth to 5 baby monkeys. The total number of baby monkeys is 5 * 5 =",
+          "donor": "Each of the 4 original monkeys gave birth to 4 baby monkeys. The total number of baby monkeys is 4 * 4 =",
+          "five_answer_first_tok": "2",
+          "four_answer_first_tok": "1",
+          "argmax": " ",
+          "five_tok_rank": 3,
+          "four_tok_rank": 159
+        },
+        {
+          "prompt": "I have 5 monkeys and each of them gave birth to 5 baby monkeys. The total number of monkeys is 5 * 5 + 5 =",
+          "donor": "I have 4 monkeys and each of them gave birth to 4 baby monkeys. The total number of monkeys is 4 * 4 + 4 =",
+          "five_answer_first_tok": "2",
+          "four_answer_first_tok": "2",
+          "argmax": " ",
+          "five_tok_rank": 21,
+          "four_tok_rank": 21
+        },
+        {
+          "prompt": "There are 5 birds and each bird laid 5 eggs. The total number of eggs is 5 * 5 =",
+          "donor": "There are 4 birds and each bird laid 4 eggs. The total number of eggs is 4 * 4 =",
+          "five_answer_first_tok": "2",
+          "four_answer_first_tok": "1",
+          "argmax": " ",
+          "five_tok_rank": 1,
+          "four_tok_rank": 43
+        }
+      ],
+      "ctrl_rows": [
+        {
+          "prompt": "Each of the 3 original monkeys gave birth to 3 baby monkeys. The total number of baby monkeys is 3 * 3 =",
+          "expected": "9",
+          "argmax": " ",
+          "rank": 4
+        },
+        {
+          "prompt": "There are 2 birds and each bird laid 6 eggs. The total number of eggs is 2 * 6 =",
+          "expected": "1",
+          "argmax": " ",
+          "rank": 1
+        }
+      ],
+      "argmax_to_four": 0,
+      "argmax_changed": 0,
+      "ctrl_changed": 0
+    },
+    {
+      "name": "restored",
+      "rows": [
+        {
+          "prompt": "Each of the 5 original monkeys gave birth to 5 baby monkeys. The total number of baby monkeys is 5 * 5 =",
+          "donor": "Each of the 4 original monkeys gave birth to 4 baby monkeys. The total number of baby monkeys is 4 * 4 =",
+          "five_answer_first_tok": "2",
+          "four_answer_first_tok": "1",
+          "argmax": " ",
+          "five_tok_rank": 3,
+          "four_tok_rank": 153
+        },
+        {
+          "prompt": "I have 5 monkeys and each of them gave birth to 5 baby monkeys. The total number of monkeys is 5 * 5 + 5 =",
+          "donor": "I have 4 monkeys and each of them gave birth to 4 baby monkeys. The total number of monkeys is 4 * 4 + 4 =",
+          "five_answer_first_tok": "2",
+          "four_answer_first_tok": "2",
+          "argmax": " ",
+          "five_tok_rank": 22,
+          "four_tok_rank": 22
+        },
+        {
+          "prompt": "There are 5 birds and each bird laid 5 eggs. The total number of eggs is 5 * 5 =",
+          "donor": "There are 4 birds and each bird laid 4 eggs. The total number of eggs is 4 * 4 =",
+          "five_answer_first_tok": "2",
+          "four_answer_first_tok": "1",
+          "argmax": " ",
+          "five_tok_rank": 1,
+          "four_tok_rank": 47
+        }
+      ],
+      "ctrl_rows": [
+        {
+          "prompt": "Each of the 3 original monkeys gave birth to 3 baby monkeys. The total number of baby monkeys is 3 * 3 =",
+          "expected": "9",
+          "argmax": " ",
+          "rank": 4
+        },
+        {
+          "prompt": "There are 2 birds and each bird laid 6 eggs. The total number of eggs is 2 * 6 =",
+          "expected": "1",
+          "argmax": " ",
+          "rank": 1
+        }
+      ],
+      "argmax_to_four": 0,
+      "argmax_changed": 0,
+      "ctrl_changed": 0
+    }
+  ],
+  "restoration": {
+    "bit_exact": false,
+    "max_diff": 15.515625
+  },
+  "seconds": 63.275991439819336
+}
