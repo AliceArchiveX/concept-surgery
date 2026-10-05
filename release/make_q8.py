@@ -31,7 +31,7 @@ def quantize_per_channel(w):
 
 def main():
     start = time.time()
-    OUT.mkdir(exist_ok=True)
+    OUT.mkdir(parents=True, exist_ok=True)
     index = json.loads((ROOT / 'model.safetensors.index.json').read_text())['weight_map']
 
     # Plan shards: 8 layers per shard (64 layers + embed + head + norm)

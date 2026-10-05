@@ -43,16 +43,16 @@ def donor_of(swap, prompt):
     return prompt.replace(a, b)
 
 
-def read_cells(cells_per_layer, mode):
+def read_cells(cells_per_layer, mode, inter):
     """Return the per-layer cell list for this run.
 
     mode 'table'  -> the published unit table (the surgery)
-    mode 'random' -> a seeded random selection of the same size (control)
+    mode 'random' -> a seeded random selection of the same size (control),
+                     drawn from the full intermediate width.
     """
     if mode == 'table':
         return cells_per_layer
     rng = torch.Generator().manual_seed(42)
-    inter = 10240
     return [torch.randperm(inter, generator=rng)[:len(cells_per_layer[i])].tolist()
             for i in range(len(cells_per_layer))]
 
@@ -79,7 +79,8 @@ def main():
     model, tok, head, emb = load_model(qroot=args.model)
 
     if args.prompt:
-        table = read_cells(TABLES[args.swap], 'random' if args.random else 'table')
+        inter = model.config.intermediate_size
+        table = read_cells(TABLES[args.swap], 'random' if args.random else 'table', inter)
         donor = donor_of(args.swap, args.prompt) if args.on else None
         z = forward_single(model, tok, head, emb, args.prompt,
                            swap=table if args.on else None, donor_prompt=donor)
