@@ -2,6 +2,8 @@
 
 **AI 把 5 当成了 4 —— 在开源大模型内部做的一次概念置换手术 / Concept-replacement surgery inside open LLMs.**
 
+Successfully performed on two open models at very different scales: **Qwen2.5-32B** (32B parameters, dense) and **DeepSeek-V4-Flash-0731** (304B parameters, MoE architecture) — the same swap, two different brains.
+
 We located the internal units that carry the identity of the number "five" in Qwen2.5-32B (32B parameters, open weights), and swapped their activations for the ones the model produces when reading "four" — at 128 units per layer, runtime only, weights untouched.
 
 The result: the model still reads "5", still writes "5" when reciting, still knows 5 comes after 4 — but computes with it as four.
