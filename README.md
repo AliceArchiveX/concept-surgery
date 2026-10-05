@@ -23,7 +23,7 @@ The same surgery was replicated on DeepSeek-V4-Flash-0731 (304B, MoE architectur
 
 ## Contents
 
-- **[开场白2.md](开场白2.md)** — full narrative (Chinese), all experiments in reading order
+- **[开场白.md](开场白.md)** — full narrative (Chinese), all experiments in reading order
 - **[release/](release/)** — all code, unit tables, probe cards, download guide, raw records:
   - `surgery_switch.py` — the 32B five/four and three/two switches (`--on` / `--off` / `--random` control)
   - `deepseek_switch.py` — the 304B switch
