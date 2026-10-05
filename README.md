@@ -54,7 +54,7 @@ python release/surgery_switch.py --swap five_four --off --prompt "5+2="
 
 - Greedy decoding (temperature=0) throughout: same input, same output, every run.
 - **Answer-level** readings (argmax, target ranks) reproduce across environments.
-- **Logit-level** bitwise identity holds within one process; cross-process runs show small numeric drift that does not change any answer (documented in the records).
+- **Logit-level** bitwise identity holds within one process; across processes (and as recorded in some archived runs) there is small numeric drift that does not change any answer. Where a record shows `bit_exact: false`, the answer-level restoration is what to compare; the drift magnitude is recorded in the same file.
 - Model weights are never modified — verify by SHA256 against the official release at any time.
 - Every claim in the narrative maps to a specific record file; controls (random units, restoration, unrelated arithmetic) are embedded in each record.
 

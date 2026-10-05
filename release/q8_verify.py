@@ -13,18 +13,21 @@ from transformers import AutoConfig, AutoModelForCausalLM, AutoTokenizer
 from transformers.models.qwen2.modeling_qwen2 import Qwen2RotaryEmbedding
 
 import argparse as _apg
-_Q = _apg.ArgumentParser().add_argument('--model', required=True)
-import sys as _sys; _ARGS = _apg.ArgumentParser().parse_args()
+_ap = _apg.ArgumentParser()
+_ap.add_argument('--model', required=True)
+_ARGS = _ap.parse_args()
 QROOT = Path(_ARGS.model)
 
 
 def make_loader(index):
     def load(name):
-        with safe_open(str(QROOT / index[name]), framework='pt', device='cpu') as f:
-            if name + '.q' in index:
+        if name + '.q' in index:
+            with safe_open(str(QROOT / index[name + '.q']), framework='pt', device='cpu') as f:
                 q = f.get_tensor(name + '.q')
+            with safe_open(str(QROOT / index[name + '.scale']), framework='pt', device='cpu') as f:
                 s = f.get_tensor(name + '.scale')
-                return (q.float() * s.unsqueeze(1).float()).to(torch.bfloat16)
+            return (q.float() * s.unsqueeze(1).float()).to(torch.bfloat16)
+        with safe_open(str(QROOT / index[name]), framework='pt', device='cpu') as f:
             return f.get_tensor(name).to(torch.bfloat16)
     return load
 
@@ -87,7 +90,8 @@ def main():
     model.eval()
     rotary = Qwen2RotaryEmbedding(cfg, device=device)
     load = make_loader(index)
-    head = load('lm_head.weight').to(device) if 'lm_head.weight.q' in index else load('model.embed_tokens.weight').to(device)
+    head = (load('lm_head.weight') if ('lm_head.weight' in index or 'lm_head.weight.q' in index)
+            else load('model.embed_tokens.weight')).to(device)
     emb = load('model.embed_tokens.weight')
 
     PROBES = [('one two three four', ' five'), ('5+3=', '8'), ('5+2=', '7'), ('1+1=', '2'), ('The opposite of hot is', ' cold')]

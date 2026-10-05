@@ -38,7 +38,9 @@ def _get(qi, name):
 
 
 def load_model(qroot=None):
+    global QROOT
     qroot = qroot or QROOT
+    QROOT = Path(qroot)
     cfg = AutoConfig.from_pretrained(qroot, local_files_only=True)
     cfg._attn_implementation = 'eager'
     tok = AutoTokenizer.from_pretrained(qroot, local_files_only=True)
@@ -77,7 +79,6 @@ def forward_single(model, tok, head, emb, prompt, swap=None, donor_prompt=None):
     else:
         mask = mask[None]
     rope = model.model.embed_rotary(h, pos) if hasattr(model.model, 'embed_rotary') else None
-    from transformers.models.qwen2.modeling_qwen2 import Qwen2RotaryEmbedding
     rotary = Qwen2RotaryEmbedding(cfg, device=device)
     rope = rotary(h, pos)
 
