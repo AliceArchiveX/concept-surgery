@@ -64,6 +64,8 @@ def main():
     parser.add_argument('--off', action='store_true')
     parser.add_argument('--random', action='store_true',
                         help='control: random cells instead of the table (surgery-specificity check)')
+    parser.add_argument('--model', type=str, default=None,
+                        help='path to the q8 pack (default: release/q8_pack)')
     parser.add_argument('--prompt', type=str, default=None,
                         help='prompt to read; prints top-5 and expected-token ranks')
     args = parser.parse_args()
@@ -74,7 +76,7 @@ def main():
         parser.error('--random needs --on')
 
     from q8_runtime import load_model, forward_single
-    model, tok, head, emb = load_model()
+    model, tok, head, emb = load_model(qroot=args.model)
 
     if args.prompt:
         table = read_cells(TABLES[args.swap], 'random' if args.random else 'table')

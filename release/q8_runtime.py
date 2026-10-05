@@ -38,13 +38,14 @@ def _get(qi, name):
 
 
 def load_model(qroot=None):
+    """Load config/tokenizer/embeddings. qroot: path to the q8 pack
+    (defaults to ./q8_pack next to this file)."""
     global QROOT
-    qroot = qroot or QROOT
-    QROOT = Path(qroot)
-    cfg = AutoConfig.from_pretrained(qroot, local_files_only=True)
+    QROOT = Path(qroot) if qroot else QROOT
+    cfg = AutoConfig.from_pretrained(QROOT, local_files_only=True)
     cfg._attn_implementation = 'eager'
-    tok = AutoTokenizer.from_pretrained(qroot, local_files_only=True)
-    qi = json.loads((qroot / 'model.safetensors.index.json').read_text())['weight_map']
+    tok = AutoTokenizer.from_pretrained(QROOT, local_files_only=True)
+    qi = json.loads((QROOT / 'model.safetensors.index.json').read_text())['weight_map']
     device = 'cuda'
     with torch.device('meta'):
         model = AutoModelForCausalLM.from_config(cfg, dtype=torch.bfloat16)
@@ -67,6 +68,9 @@ def forward_single(model, tok, head, emb, prompt, swap=None, donor_prompt=None):
     seq_a = tok.encode(prompt, add_special_tokens=False)
     rows = 2 if (swap is not None and donor_prompt is not None) else 1
     seqs = [seq_a] + ([tok.encode(donor_prompt, add_special_tokens=False)] if rows == 2 else [])
+    if rows == 2:
+        assert len(seqs[0]) == len(seqs[1]), ('target/donor length mismatch',
+                                              len(seqs[0]), len(seqs[1]))
     width = max(len(s) for s in seqs)
     h = torch.zeros(rows, width, H, device=device, dtype=torch.bfloat16)
     for j, s in enumerate(seqs):

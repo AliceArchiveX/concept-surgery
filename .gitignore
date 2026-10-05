@@ -1,5 +1,6 @@
 __pycache__/
 *.pyc
 offload*/
+q8_pack/
 *.tmp
 results.json.tmp
