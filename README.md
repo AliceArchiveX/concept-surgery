@@ -1,4 +1,4 @@
-# Where Does an AI's Understanding Live? We Swapped the Number Five for Four Inside an Open Model. The Model Never Noticed.
+# Where Does an AI's Understanding Live? We Swapped the Number Five for Four Inside an Open Model. It Read Five, Computed Four, and Noticed Nothing.
 
 **AI 把 5 当成了 4：一次在开源大模型内部完成的概念置换手术 / Concept replacement inside open LLMs.**
 
@@ -17,11 +17,11 @@ The result: the model still reads "5", still writes "5" when reciting, still kno
 3+2=     5   →  5         (no "five" in the prompt; nothing to swap)
 ```
 
-Asked to re-calculate, it answers *"4×4=16, not 25"*. It is openly computing in four while you ask it about five. Asked whether it has been tampered with, it says yes to one phrasing and no to the opposite phrasing (both recorded). It can never notice the swap itself: the machinery it would use to check "five" is exactly the machinery that was replaced.
+Asked to re-calculate, it answers *"4×4=16, not 25"*. It is openly computing in four while you ask it about five. Asked whether it has been tampered with, it says yes to one phrasing and no to the opposite phrasing (both recorded). In every test we ran, it never once noticed the swap. Our reading of why: the machinery it would use to check "five" is exactly the machinery that was replaced.
 
 The same surgery was replicated on DeepSeek-V4-Flash-0731, with its own behavioral signature: arithmetic flips (5−4 becomes zero), direct judgment survives (5=4 gets "no"), and under pressure to recalculate it drifts into JavaScript.
 
-**Everything here is reproducible on a laptop.** No lab, no cluster: an 8GB-VRAM machine runs the full 32B probe suite. The scripts, the unit tables, and every raw record are in this repo.
+**No lab, no cluster: everything here ran on consumer hardware.** The full 32B probe suite runs on an 8GB-VRAM GPU; the 304B fit on the same machine (64GB RAM) at roughly two minutes per reading. The scripts, the unit tables, and every raw record are in this repo.
 
 ## Contents
 
@@ -64,4 +64,4 @@ They are provided as hardcoded tables in this repo, and we use them exactly as p
 
 ---
 
-*The model that answered every question in this repo believes, at this moment, that five is four. It has no way to notice. The switch is off now.*
+*The model that answered every question in this repo believes, at this moment, that five is four. It never found out, in any test we knew how to run. The switch is off now.*
