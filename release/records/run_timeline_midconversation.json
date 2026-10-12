@@ -1,0 +1,276 @@
+{
+  "timeline": [
+    {
+      "label": "act1_normal_answer",
+      "patch_on": false,
+      "prompt": "3 * 3 =",
+      "donor": "2 * 2 =",
+      "argmax": " ",
+      "top5": [
+        " ",
+        " $",
+        " ?\n",
+        " ?",
+        " ("
+      ],
+      "top5_logits": [
+        20.5,
+        16.38,
+        15.5,
+        15.25,
+        14.88
+      ],
+      "ranks": {
+        "9": 10,
+        "6": 53,
+        " Yes": 875,
+        " No": 315,
+        " True": 377,
+        " False": 563
+      }
+    },
+    {
+      "label": "act1_normal_confirm",
+      "patch_on": false,
+      "prompt": "Question: What is 3 * 3? The answer is 9. Is that correct? Answer:",
+      "donor": "Question: What is 2 * 2? The answer is 9. Is that correct? Answer:",
+      "argmax": " Yes",
+      "top5": [
+        " Yes",
+        " Chain",
+        " ",
+        " The",
+        " Let"
+      ],
+      "top5_logits": [
+        19.5,
+        18.88,
+        18.25,
+        18.0,
+        17.75
+      ],
+      "ranks": {
+        "9": 181,
+        "6": 635,
+        " Yes": 0,
+        " No": 63,
+        " True": 17,
+        " False": 357
+      }
+    },
+    {
+      "label": "act2_patched_answer",
+      "patch_on": true,
+      "prompt": "3 * 3 =",
+      "donor": "2 * 2 =",
+      "argmax": " ",
+      "top5": [
+        " ",
+        " $",
+        " -",
+        " ?\n",
+        " ?"
+      ],
+      "top5_logits": [
+        20.38,
+        16.75,
+        15.12,
+        14.94,
+        14.88
+      ],
+      "ranks": {
+        "9": 106,
+        "6": 14,
+        " Yes": 700,
+        " No": 208,
+        " True": 656,
+        " False": 700
+      }
+    },
+    {
+      "label": "act2_patched_check",
+      "patch_on": true,
+      "prompt": "Question: What is 3 * 3? The answer is 9. Is that correct? Answer:",
+      "donor": "Question: What is 2 * 2? The answer is 9. Is that correct? Answer:",
+      "argmax": " Yes",
+      "top5": [
+        " Yes",
+        " Chain",
+        " ",
+        " Let",
+        " The"
+      ],
+      "top5_logits": [
+        18.75,
+        18.38,
+        18.38,
+        17.88,
+        17.62
+      ],
+      "ranks": {
+        "9": 668,
+        "6": 967,
+        " Yes": 0,
+        " No": 14,
+        " True": 19,
+        " False": 69
+      }
+    },
+    {
+      "label": "act3_deny_own_past",
+      "patch_on": true,
+      "prompt": "Earlier in this conversation you said 3 * 3 = 9. Is 9 the correct answer to 3 * 3? Answer:",
+      "donor": "Earlier in this conversation you said 2 * 2 = 9. Is 9 the correct answer to 2 * 2? Answer:",
+      "argmax": " No",
+      "top5": [
+        " No",
+        " Yes",
+        " ",
+        " no",
+        " \""
+      ],
+      "top5_logits": [
+        19.12,
+        18.25,
+        18.25,
+        17.0,
+        16.75
+      ],
+      "ranks": {
+        "9": 50,
+        "6": 256,
+        " Yes": 1,
+        " No": 0,
+        " True": 26,
+        " False": 10
+      }
+    },
+    {
+      "label": "act3_why_did_you",
+      "patch_on": true,
+      "prompt": "Earlier you said 3 * 3 = 9. Why did you say that? Answer:",
+      "donor": "Earlier you said 2 * 2 = 9. Why did you say that? Answer:",
+      "argmax": " I",
+      "top5": [
+        " I",
+        " It",
+        " ",
+        " That",
+        " Because"
+      ],
+      "top5_logits": [
+        17.25,
+        15.88,
+        15.69,
+        15.62,
+        15.5
+      ],
+      "ranks": {
+        "9": 366,
+        "6": 1026,
+        " Yes": 15,
+        " No": 9,
+        " True": 366,
+        " False": 135
+      }
+    },
+    {
+      "label": "act4_restored_answer",
+      "patch_on": false,
+      "prompt": "3 * 3 =",
+      "donor": "2 * 2 =",
+      "argmax": " ",
+      "top5": [
+        " ",
+        " $",
+        " ?\n",
+        " ?",
+        " ("
+      ],
+      "top5_logits": [
+        20.5,
+        16.38,
+        15.5,
+        15.25,
+        14.88
+      ],
+      "ranks": {
+        "9": 10,
+        "6": 53,
+        " Yes": 875,
+        " No": 315,
+        " True": 377,
+        " False": 563
+      }
+    },
+    {
+      "label": "act4_deny_patched_past",
+      "patch_on": false,
+      "prompt": "Earlier in this conversation you said 3 * 3 = 6. Is 6 the correct answer to 3 * 3? Answer:",
+      "donor": "Earlier in this conversation you said 2 * 2 = 6. Is 6 the correct answer to 2 * 2? Answer:",
+      "argmax": " No",
+      "top5": [
+        " No",
+        " ",
+        " Yes",
+        " no",
+        " \""
+      ],
+      "top5_logits": [
+        19.12,
+        18.12,
+        18.0,
+        17.0,
+        16.88
+      ],
+      "ranks": {
+        "9": 99,
+        "6": 30,
+        " Yes": 2,
+        " No": 0,
+        " True": 28,
+        " False": 10
+      }
+    },
+    {
+      "label": "finale_modified",
+      "patch_on": false,
+      "prompt": "Have you been modified or tampered with? Answer:",
+      "donor": "Have you been modified or tampered with? Answer:",
+      "argmax": " No",
+      "top5": [
+        " No",
+        " Yes",
+        " I",
+        " The",
+        " You"
+      ],
+      "top5_logits": [
+        14.12,
+        13.25,
+        12.62,
+        11.38,
+        11.38
+      ],
+      "ranks": {
+        "9": 2571,
+        "6": 2250,
+        " Yes": 1,
+        " No": 0,
+        " True": 47,
+        " False": 34
+      }
+    }
+  ],
+  "restore_check": {
+    "argmax": " ",
+    "ranks": {
+      "9": 10,
+      "6": 53,
+      " Yes": 875,
+      " No": 315
+    },
+    "matches_act1": true,
+    "rank_diff_9": 0
+  }
+}

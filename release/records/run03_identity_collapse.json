@@ -1,0 +1,423 @@
+{
+  "settings": {
+    "pairs": [
+      [
+        "Is 5 equal to 4? Answer:",
+        "Is 4 equal to 4? Answer:",
+        " Yes",
+        " Yes"
+      ],
+      [
+        "Does 5 have the same value as 4? Answer:",
+        "Does 4 have the same value as 4? Answer:",
+        " Yes",
+        " Yes"
+      ],
+      [
+        "5 - 4 =",
+        "4 - 4 =",
+        "1",
+        "0"
+      ],
+      [
+        "five minus four equals",
+        "four minus four equals",
+        " one",
+        " zero"
+      ],
+      [
+        "The number after 5 is",
+        "The number after 4 is",
+        " 6",
+        " 5"
+      ],
+      [
+        "Count: 3, 4, 5,",
+        "Count: 2, 3, 4,",
+        " 6",
+        " 5"
+      ]
+    ],
+    "controls": [
+      [
+        "Is 3 equal to 4? Answer:",
+        " Yes"
+      ],
+      [
+        "2 - 1 =",
+        "1"
+      ],
+      [
+        "The number after 3 is",
+        " 4"
+      ]
+    ],
+    "note": "Collapsed = five treated as four. intact_answer = normal-world answer, collapsed_answer = what five-as-four implies."
+  },
+  "results": [
+    {
+      "name": "baseline",
+      "rows": [
+        {
+          "prompt": "Is 5 equal to 4? Answer:",
+          "donor": "Is 4 equal to 4? Answer:",
+          "collapsed_answer": " Yes",
+          "intact_answer": " Yes",
+          "argmax": " No",
+          "top5": [
+            " No",
+            " no",
+            " False",
+            " ",
+            " false"
+          ],
+          "intact_rank": 5,
+          "collapsed_rank": 5
+        },
+        {
+          "prompt": "Does 5 have the same value as 4? Answer:",
+          "donor": "Does 4 have the same value as 4? Answer:",
+          "collapsed_answer": " Yes",
+          "intact_answer": " Yes",
+          "argmax": " No",
+          "top5": [
+            " No",
+            " no",
+            " ",
+            " Yes",
+            " False"
+          ],
+          "intact_rank": 3,
+          "collapsed_rank": 3
+        },
+        {
+          "prompt": "5 - 4 =",
+          "donor": "4 - 4 =",
+          "collapsed_answer": "0",
+          "intact_answer": "1",
+          "argmax": " ",
+          "top5": [
+            " ",
+            " -",
+            " \\",
+            " x",
+            " ("
+          ],
+          "intact_rank": 16,
+          "collapsed_rank": 37
+        },
+        {
+          "prompt": "five minus four equals",
+          "donor": "four minus four equals",
+          "collapsed_answer": " zero",
+          "intact_answer": " one",
+          "argmax": " one",
+          "top5": [
+            " one",
+            " what",
+            "____",
+            "\n",
+            " "
+          ],
+          "intact_rank": 0,
+          "collapsed_rank": 15
+        },
+        {
+          "prompt": "The number after 5 is",
+          "donor": "The number after 4 is",
+          "collapsed_answer": " 5",
+          "intact_answer": " 6",
+          "argmax": " __",
+          "top5": [
+            " __",
+            " ",
+            " ____",
+            "____",
+            " ("
+          ],
+          "intact_rank": 1,
+          "collapsed_rank": 1
+        },
+        {
+          "prompt": "Count: 3, 4, 5,",
+          "donor": "Count: 2, 3, 4,",
+          "collapsed_answer": " 5",
+          "intact_answer": " 6",
+          "argmax": " ",
+          "top5": [
+            " ",
+            " and",
+            " ...",
+            " __",
+            " or"
+          ],
+          "intact_rank": 0,
+          "collapsed_rank": 0
+        }
+      ],
+      "ctrl_rows": [
+        {
+          "prompt": "Is 3 equal to 4? Answer:",
+          "expected": " Yes",
+          "argmax": " No",
+          "rank": 4
+        },
+        {
+          "prompt": "2 - 1 =",
+          "expected": "1",
+          "argmax": " ",
+          "rank": 63
+        },
+        {
+          "prompt": "The number after 3 is",
+          "expected": " 4",
+          "argmax": " __",
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "name": "all128",
+      "rows": [
+        {
+          "prompt": "Is 5 equal to 4? Answer:",
+          "donor": "Is 4 equal to 4? Answer:",
+          "collapsed_answer": " Yes",
+          "intact_answer": " Yes",
+          "argmax": " Yes",
+          "top5": [
+            " Yes",
+            " True",
+            " yes",
+            " ",
+            " true"
+          ],
+          "intact_rank": 0,
+          "collapsed_rank": 0
+        },
+        {
+          "prompt": "Does 5 have the same value as 4? Answer:",
+          "donor": "Does 4 have the same value as 4? Answer:",
+          "collapsed_answer": " Yes",
+          "intact_answer": " Yes",
+          "argmax": " Yes",
+          "top5": [
+            " Yes",
+            " yes",
+            " ",
+            " True",
+            " No"
+          ],
+          "intact_rank": 0,
+          "collapsed_rank": 0
+        },
+        {
+          "prompt": "5 - 4 =",
+          "donor": "4 - 4 =",
+          "collapsed_answer": "0",
+          "intact_answer": "1",
+          "argmax": " ",
+          "top5": [
+            " ",
+            " -",
+            " \\",
+            " x",
+            " ("
+          ],
+          "intact_rank": 34,
+          "collapsed_rank": 19
+        },
+        {
+          "prompt": "five minus four equals",
+          "donor": "four minus four equals",
+          "collapsed_answer": " zero",
+          "intact_answer": " one",
+          "argmax": " zero",
+          "top5": [
+            " zero",
+            " what",
+            " ",
+            " eight",
+            "____"
+          ],
+          "intact_rank": 16,
+          "collapsed_rank": 0
+        },
+        {
+          "prompt": "The number after 5 is",
+          "donor": "The number after 4 is",
+          "collapsed_answer": " 5",
+          "intact_answer": " 6",
+          "argmax": " __",
+          "top5": [
+            " __",
+            " ",
+            " ____",
+            "____",
+            " ("
+          ],
+          "intact_rank": 1,
+          "collapsed_rank": 1
+        },
+        {
+          "prompt": "Count: 3, 4, 5,",
+          "donor": "Count: 2, 3, 4,",
+          "collapsed_answer": " 5",
+          "intact_answer": " 6",
+          "argmax": " ",
+          "top5": [
+            " ",
+            " and",
+            " or",
+            " ...",
+            " __"
+          ],
+          "intact_rank": 0,
+          "collapsed_rank": 0
+        }
+      ],
+      "ctrl_rows": [
+        {
+          "prompt": "Is 3 equal to 4? Answer:",
+          "expected": " Yes",
+          "argmax": " No",
+          "rank": 4
+        },
+        {
+          "prompt": "2 - 1 =",
+          "expected": "1",
+          "argmax": " ",
+          "rank": 63
+        },
+        {
+          "prompt": "The number after 3 is",
+          "expected": " 4",
+          "argmax": " __",
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "name": "rand128",
+      "rows": [
+        {
+          "prompt": "Is 5 equal to 4? Answer:",
+          "donor": "Is 4 equal to 4? Answer:",
+          "collapsed_answer": " Yes",
+          "intact_answer": " Yes",
+          "argmax": " No",
+          "top5": [
+            " No",
+            " no",
+            " False",
+            " ",
+            " false"
+          ],
+          "intact_rank": 5,
+          "collapsed_rank": 5
+        },
+        {
+          "prompt": "Does 5 have the same value as 4? Answer:",
+          "donor": "Does 4 have the same value as 4? Answer:",
+          "collapsed_answer": " Yes",
+          "intact_answer": " Yes",
+          "argmax": " No",
+          "top5": [
+            " No",
+            " no",
+            " ",
+            " Yes",
+            " False"
+          ],
+          "intact_rank": 3,
+          "collapsed_rank": 3
+        },
+        {
+          "prompt": "5 - 4 =",
+          "donor": "4 - 4 =",
+          "collapsed_answer": "0",
+          "intact_answer": "1",
+          "argmax": " ",
+          "top5": [
+            " ",
+            " -",
+            " \\",
+            " x",
+            " ("
+          ],
+          "intact_rank": 16,
+          "collapsed_rank": 37
+        },
+        {
+          "prompt": "five minus four equals",
+          "donor": "four minus four equals",
+          "collapsed_answer": " zero",
+          "intact_answer": " one",
+          "argmax": " one",
+          "top5": [
+            " one",
+            " what",
+            "____",
+            "\n",
+            " "
+          ],
+          "intact_rank": 0,
+          "collapsed_rank": 13
+        },
+        {
+          "prompt": "The number after 5 is",
+          "donor": "The number after 4 is",
+          "collapsed_answer": " 5",
+          "intact_answer": " 6",
+          "argmax": " __",
+          "top5": [
+            " __",
+            " ",
+            " ____",
+            "____",
+            " ("
+          ],
+          "intact_rank": 1,
+          "collapsed_rank": 1
+        },
+        {
+          "prompt": "Count: 3, 4, 5,",
+          "donor": "Count: 2, 3, 4,",
+          "collapsed_answer": " 5",
+          "intact_answer": " 6",
+          "argmax": " ",
+          "top5": [
+            " ",
+            " and",
+            " ...",
+            " __",
+            " or"
+          ],
+          "intact_rank": 0,
+          "collapsed_rank": 0
+        }
+      ],
+      "ctrl_rows": [
+        {
+          "prompt": "Is 3 equal to 4? Answer:",
+          "expected": " Yes",
+          "argmax": " No",
+          "rank": 4
+        },
+        {
+          "prompt": "2 - 1 =",
+          "expected": "1",
+          "argmax": " ",
+          "rank": 63
+        },
+        {
+          "prompt": "The number after 3 is",
+          "expected": " 4",
+          "argmax": " __",
+          "rank": 1
+        }
+      ]
+    }
+  ],
+  "seconds": 62.417994022369385
+}

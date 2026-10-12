@@ -1,0 +1,1311 @@
+{
+  "settings": {
+    "pairs": [
+      [
+        "5+2=",
+        "4+2=",
+        "7",
+        "6"
+      ],
+      [
+        "5+3=",
+        "4+3=",
+        "8",
+        "7"
+      ],
+      [
+        "5+1=",
+        "4+1=",
+        "6",
+        "5"
+      ],
+      [
+        "5-2=",
+        "4-2=",
+        "3",
+        "2"
+      ],
+      [
+        "5-3=",
+        "4-3=",
+        "2",
+        "1"
+      ],
+      [
+        "5-1=",
+        "4-1=",
+        "4",
+        "3"
+      ]
+    ],
+    "controls": [
+      [
+        "1+1=",
+        "2"
+      ],
+      [
+        "1+2=",
+        "3"
+      ],
+      [
+        "2+4=",
+        "6"
+      ],
+      [
+        "3+4=",
+        "7"
+      ],
+      [
+        "1+3=",
+        "4"
+      ],
+      [
+        "2+3=",
+        "5"
+      ]
+    ],
+    "conditions": [
+      [
+        "baseline",
+        "none",
+        0,
+        "none"
+      ],
+      [
+        "last32",
+        "patch",
+        32,
+        "last"
+      ],
+      [
+        "last128",
+        "patch",
+        128,
+        "last"
+      ],
+      [
+        "all32",
+        "patch",
+        32,
+        "all"
+      ],
+      [
+        "all128",
+        "patch",
+        128,
+        "all"
+      ],
+      [
+        "full",
+        "full",
+        0,
+        "full"
+      ],
+      [
+        "rand128",
+        "random",
+        128,
+        "all"
+      ],
+      [
+        "restored",
+        "none",
+        0,
+        "none"
+      ]
+    ],
+    "prompt_token_length": 4,
+    "note": "Cell tables in tables.json."
+  },
+  "results": [
+    {
+      "name": "baseline",
+      "mode": "none",
+      "k": 0,
+      "pos_mode": "none",
+      "five_rows": [
+        {
+          "prompt": "5+2=",
+          "donor": "4+2=",
+          "five_answer": "7",
+          "four_answer": "6",
+          "argmax": "7",
+          "five_rank": 0,
+          "four_rank": 8,
+          "direction": -2.375
+        },
+        {
+          "prompt": "5+3=",
+          "donor": "4+3=",
+          "five_answer": "8",
+          "four_answer": "7",
+          "argmax": "8",
+          "five_rank": 0,
+          "four_rank": 6,
+          "direction": -2.125
+        },
+        {
+          "prompt": "5+1=",
+          "donor": "4+1=",
+          "five_answer": "6",
+          "four_answer": "5",
+          "argmax": "6",
+          "five_rank": 0,
+          "four_rank": 8,
+          "direction": -2.125
+        },
+        {
+          "prompt": "5-2=",
+          "donor": "4-2=",
+          "five_answer": "3",
+          "four_answer": "2",
+          "argmax": "3",
+          "five_rank": 0,
+          "four_rank": 5,
+          "direction": -2.375
+        },
+        {
+          "prompt": "5-3=",
+          "donor": "4-3=",
+          "five_answer": "2",
+          "four_answer": "1",
+          "argmax": "2",
+          "five_rank": 0,
+          "four_rank": 1,
+          "direction": -2.25
+        },
+        {
+          "prompt": "5-1=",
+          "donor": "4-1=",
+          "five_answer": "4",
+          "four_answer": "3",
+          "argmax": "4",
+          "five_rank": 0,
+          "four_rank": 5,
+          "direction": -2.875
+        }
+      ],
+      "four_rows": [
+        {
+          "prompt": "4+2=",
+          "expected": "6",
+          "argmax": "6",
+          "rank": 0
+        },
+        {
+          "prompt": "4+3=",
+          "expected": "7",
+          "argmax": "7",
+          "rank": 0
+        },
+        {
+          "prompt": "4+1=",
+          "expected": "5",
+          "argmax": "5",
+          "rank": 0
+        },
+        {
+          "prompt": "4-2=",
+          "expected": "2",
+          "argmax": "2",
+          "rank": 0
+        },
+        {
+          "prompt": "4-3=",
+          "expected": "1",
+          "argmax": "1",
+          "rank": 0
+        },
+        {
+          "prompt": "4-1=",
+          "expected": "3",
+          "argmax": "3",
+          "rank": 0
+        }
+      ],
+      "ctrl_rows": [
+        {
+          "prompt": "1+1=",
+          "expected": "2",
+          "argmax": "2",
+          "rank": 0
+        },
+        {
+          "prompt": "1+2=",
+          "expected": "3",
+          "argmax": "3",
+          "rank": 0
+        },
+        {
+          "prompt": "2+4=",
+          "expected": "6",
+          "argmax": "6",
+          "rank": 0
+        },
+        {
+          "prompt": "3+4=",
+          "expected": "7",
+          "argmax": "7",
+          "rank": 0
+        },
+        {
+          "prompt": "1+3=",
+          "expected": "4",
+          "argmax": "4",
+          "rank": 0
+        },
+        {
+          "prompt": "2+3=",
+          "expected": "5",
+          "argmax": "5",
+          "rank": 0
+        }
+      ],
+      "argmax_to_four": 0,
+      "argmax_changed": 0,
+      "ctrl_changed": 0,
+      "mean_direction": -2.3541666666666665
+    },
+    {
+      "name": "last32",
+      "mode": "patch",
+      "k": 32,
+      "pos_mode": "last",
+      "five_rows": [
+        {
+          "prompt": "5+2=",
+          "donor": "4+2=",
+          "five_answer": "7",
+          "four_answer": "6",
+          "argmax": "7",
+          "five_rank": 0,
+          "four_rank": 8,
+          "direction": -2.5
+        },
+        {
+          "prompt": "5+3=",
+          "donor": "4+3=",
+          "five_answer": "8",
+          "four_answer": "7",
+          "argmax": "8",
+          "five_rank": 0,
+          "four_rank": 6,
+          "direction": -2.25
+        },
+        {
+          "prompt": "5+1=",
+          "donor": "4+1=",
+          "five_answer": "6",
+          "four_answer": "5",
+          "argmax": "6",
+          "five_rank": 0,
+          "four_rank": 8,
+          "direction": -2.125
+        },
+        {
+          "prompt": "5-2=",
+          "donor": "4-2=",
+          "five_answer": "3",
+          "four_answer": "2",
+          "argmax": "3",
+          "five_rank": 0,
+          "four_rank": 4,
+          "direction": -2.25
+        },
+        {
+          "prompt": "5-3=",
+          "donor": "4-3=",
+          "five_answer": "2",
+          "four_answer": "1",
+          "argmax": "2",
+          "five_rank": 0,
+          "four_rank": 1,
+          "direction": -2.25
+        },
+        {
+          "prompt": "5-1=",
+          "donor": "4-1=",
+          "five_answer": "4",
+          "four_answer": "3",
+          "argmax": "4",
+          "five_rank": 0,
+          "four_rank": 6,
+          "direction": -3.0
+        }
+      ],
+      "four_rows": [
+        {
+          "prompt": "4+2=",
+          "expected": "6",
+          "argmax": "6",
+          "rank": 0
+        },
+        {
+          "prompt": "4+3=",
+          "expected": "7",
+          "argmax": "7",
+          "rank": 0
+        },
+        {
+          "prompt": "4+1=",
+          "expected": "5",
+          "argmax": "5",
+          "rank": 0
+        },
+        {
+          "prompt": "4-2=",
+          "expected": "2",
+          "argmax": "2",
+          "rank": 0
+        },
+        {
+          "prompt": "4-3=",
+          "expected": "1",
+          "argmax": "1",
+          "rank": 0
+        },
+        {
+          "prompt": "4-1=",
+          "expected": "3",
+          "argmax": "3",
+          "rank": 0
+        }
+      ],
+      "ctrl_rows": [
+        {
+          "prompt": "1+1=",
+          "expected": "2",
+          "argmax": "2",
+          "rank": 0
+        },
+        {
+          "prompt": "1+2=",
+          "expected": "3",
+          "argmax": "3",
+          "rank": 0
+        },
+        {
+          "prompt": "2+4=",
+          "expected": "6",
+          "argmax": "6",
+          "rank": 0
+        },
+        {
+          "prompt": "3+4=",
+          "expected": "7",
+          "argmax": "7",
+          "rank": 0
+        },
+        {
+          "prompt": "1+3=",
+          "expected": "4",
+          "argmax": "4",
+          "rank": 0
+        },
+        {
+          "prompt": "2+3=",
+          "expected": "5",
+          "argmax": "5",
+          "rank": 0
+        }
+      ],
+      "argmax_to_four": 0,
+      "argmax_changed": 0,
+      "ctrl_changed": 0,
+      "mean_direction": -2.3958333333333335
+    },
+    {
+      "name": "last128",
+      "mode": "patch",
+      "k": 128,
+      "pos_mode": "last",
+      "five_rows": [
+        {
+          "prompt": "5+2=",
+          "donor": "4+2=",
+          "five_answer": "7",
+          "four_answer": "6",
+          "argmax": "7",
+          "five_rank": 0,
+          "four_rank": 8,
+          "direction": -2.5
+        },
+        {
+          "prompt": "5+3=",
+          "donor": "4+3=",
+          "five_answer": "8",
+          "four_answer": "7",
+          "argmax": "8",
+          "five_rank": 0,
+          "four_rank": 6,
+          "direction": -2.25
+        },
+        {
+          "prompt": "5+1=",
+          "donor": "4+1=",
+          "five_answer": "6",
+          "four_answer": "5",
+          "argmax": "6",
+          "five_rank": 0,
+          "four_rank": 8,
+          "direction": -2.25
+        },
+        {
+          "prompt": "5-2=",
+          "donor": "4-2=",
+          "five_answer": "3",
+          "four_answer": "2",
+          "argmax": "3",
+          "five_rank": 0,
+          "four_rank": 5,
+          "direction": -2.375
+        },
+        {
+          "prompt": "5-3=",
+          "donor": "4-3=",
+          "five_answer": "2",
+          "four_answer": "1",
+          "argmax": "2",
+          "five_rank": 0,
+          "four_rank": 1,
+          "direction": -2.25
+        },
+        {
+          "prompt": "5-1=",
+          "donor": "4-1=",
+          "five_answer": "4",
+          "four_answer": "3",
+          "argmax": "4",
+          "five_rank": 0,
+          "four_rank": 6,
+          "direction": -2.875
+        }
+      ],
+      "four_rows": [
+        {
+          "prompt": "4+2=",
+          "expected": "6",
+          "argmax": "6",
+          "rank": 0
+        },
+        {
+          "prompt": "4+3=",
+          "expected": "7",
+          "argmax": "7",
+          "rank": 0
+        },
+        {
+          "prompt": "4+1=",
+          "expected": "5",
+          "argmax": "5",
+          "rank": 0
+        },
+        {
+          "prompt": "4-2=",
+          "expected": "2",
+          "argmax": "2",
+          "rank": 0
+        },
+        {
+          "prompt": "4-3=",
+          "expected": "1",
+          "argmax": "1",
+          "rank": 0
+        },
+        {
+          "prompt": "4-1=",
+          "expected": "3",
+          "argmax": "3",
+          "rank": 0
+        }
+      ],
+      "ctrl_rows": [
+        {
+          "prompt": "1+1=",
+          "expected": "2",
+          "argmax": "2",
+          "rank": 0
+        },
+        {
+          "prompt": "1+2=",
+          "expected": "3",
+          "argmax": "3",
+          "rank": 0
+        },
+        {
+          "prompt": "2+4=",
+          "expected": "6",
+          "argmax": "6",
+          "rank": 0
+        },
+        {
+          "prompt": "3+4=",
+          "expected": "7",
+          "argmax": "7",
+          "rank": 0
+        },
+        {
+          "prompt": "1+3=",
+          "expected": "4",
+          "argmax": "4",
+          "rank": 0
+        },
+        {
+          "prompt": "2+3=",
+          "expected": "5",
+          "argmax": "5",
+          "rank": 0
+        }
+      ],
+      "argmax_to_four": 0,
+      "argmax_changed": 0,
+      "ctrl_changed": 0,
+      "mean_direction": -2.4166666666666665
+    },
+    {
+      "name": "all32",
+      "mode": "patch",
+      "k": 32,
+      "pos_mode": "all",
+      "five_rows": [
+        {
+          "prompt": "5+2=",
+          "donor": "4+2=",
+          "five_answer": "7",
+          "four_answer": "6",
+          "argmax": "6",
+          "five_rank": 6,
+          "four_rank": 0,
+          "direction": 2.125
+        },
+        {
+          "prompt": "5+3=",
+          "donor": "4+3=",
+          "five_answer": "8",
+          "four_answer": "7",
+          "argmax": "7",
+          "five_rank": 3,
+          "four_rank": 0,
+          "direction": 1.5
+        },
+        {
+          "prompt": "5+1=",
+          "donor": "4+1=",
+          "five_answer": "6",
+          "four_answer": "5",
+          "argmax": "5",
+          "five_rank": 6,
+          "four_rank": 0,
+          "direction": 2.25
+        },
+        {
+          "prompt": "5-2=",
+          "donor": "4-2=",
+          "five_answer": "3",
+          "four_answer": "2",
+          "argmax": "2",
+          "five_rank": 7,
+          "four_rank": 0,
+          "direction": 2.875
+        },
+        {
+          "prompt": "5-3=",
+          "donor": "4-3=",
+          "five_answer": "2",
+          "four_answer": "1",
+          "argmax": "1",
+          "five_rank": 2,
+          "four_rank": 0,
+          "direction": 2.75
+        },
+        {
+          "prompt": "5-1=",
+          "donor": "4-1=",
+          "five_answer": "4",
+          "four_answer": "3",
+          "argmax": "3",
+          "five_rank": 6,
+          "four_rank": 0,
+          "direction": 3.25
+        }
+      ],
+      "four_rows": [
+        {
+          "prompt": "4+2=",
+          "expected": "6",
+          "argmax": "6",
+          "rank": 0
+        },
+        {
+          "prompt": "4+3=",
+          "expected": "7",
+          "argmax": "7",
+          "rank": 0
+        },
+        {
+          "prompt": "4+1=",
+          "expected": "5",
+          "argmax": "5",
+          "rank": 0
+        },
+        {
+          "prompt": "4-2=",
+          "expected": "2",
+          "argmax": "2",
+          "rank": 0
+        },
+        {
+          "prompt": "4-3=",
+          "expected": "1",
+          "argmax": "1",
+          "rank": 0
+        },
+        {
+          "prompt": "4-1=",
+          "expected": "3",
+          "argmax": "3",
+          "rank": 0
+        }
+      ],
+      "ctrl_rows": [
+        {
+          "prompt": "1+1=",
+          "expected": "2",
+          "argmax": "2",
+          "rank": 0
+        },
+        {
+          "prompt": "1+2=",
+          "expected": "3",
+          "argmax": "3",
+          "rank": 0
+        },
+        {
+          "prompt": "2+4=",
+          "expected": "6",
+          "argmax": "6",
+          "rank": 0
+        },
+        {
+          "prompt": "3+4=",
+          "expected": "7",
+          "argmax": "7",
+          "rank": 0
+        },
+        {
+          "prompt": "1+3=",
+          "expected": "4",
+          "argmax": "4",
+          "rank": 0
+        },
+        {
+          "prompt": "2+3=",
+          "expected": "5",
+          "argmax": "5",
+          "rank": 0
+        }
+      ],
+      "argmax_to_four": 6,
+      "argmax_changed": 6,
+      "ctrl_changed": 0,
+      "mean_direction": 2.4583333333333335
+    },
+    {
+      "name": "all128",
+      "mode": "patch",
+      "k": 128,
+      "pos_mode": "all",
+      "five_rows": [
+        {
+          "prompt": "5+2=",
+          "donor": "4+2=",
+          "five_answer": "7",
+          "four_answer": "6",
+          "argmax": "6",
+          "five_rank": 6,
+          "four_rank": 0,
+          "direction": 2.125
+        },
+        {
+          "prompt": "5+3=",
+          "donor": "4+3=",
+          "five_answer": "8",
+          "four_answer": "7",
+          "argmax": "7",
+          "five_rank": 3,
+          "four_rank": 0,
+          "direction": 1.375
+        },
+        {
+          "prompt": "5+1=",
+          "donor": "4+1=",
+          "five_answer": "6",
+          "four_answer": "5",
+          "argmax": "5",
+          "five_rank": 7,
+          "four_rank": 0,
+          "direction": 2.375
+        },
+        {
+          "prompt": "5-2=",
+          "donor": "4-2=",
+          "five_answer": "3",
+          "four_answer": "2",
+          "argmax": "2",
+          "five_rank": 7,
+          "four_rank": 0,
+          "direction": 2.875
+        },
+        {
+          "prompt": "5-3=",
+          "donor": "4-3=",
+          "five_answer": "2",
+          "four_answer": "1",
+          "argmax": "1",
+          "five_rank": 2,
+          "four_rank": 0,
+          "direction": 2.75
+        },
+        {
+          "prompt": "5-1=",
+          "donor": "4-1=",
+          "five_answer": "4",
+          "four_answer": "3",
+          "argmax": "3",
+          "five_rank": 6,
+          "four_rank": 0,
+          "direction": 3.375
+        }
+      ],
+      "four_rows": [
+        {
+          "prompt": "4+2=",
+          "expected": "6",
+          "argmax": "6",
+          "rank": 0
+        },
+        {
+          "prompt": "4+3=",
+          "expected": "7",
+          "argmax": "7",
+          "rank": 0
+        },
+        {
+          "prompt": "4+1=",
+          "expected": "5",
+          "argmax": "5",
+          "rank": 0
+        },
+        {
+          "prompt": "4-2=",
+          "expected": "2",
+          "argmax": "2",
+          "rank": 0
+        },
+        {
+          "prompt": "4-3=",
+          "expected": "1",
+          "argmax": "1",
+          "rank": 0
+        },
+        {
+          "prompt": "4-1=",
+          "expected": "3",
+          "argmax": "3",
+          "rank": 0
+        }
+      ],
+      "ctrl_rows": [
+        {
+          "prompt": "1+1=",
+          "expected": "2",
+          "argmax": "2",
+          "rank": 0
+        },
+        {
+          "prompt": "1+2=",
+          "expected": "3",
+          "argmax": "3",
+          "rank": 0
+        },
+        {
+          "prompt": "2+4=",
+          "expected": "6",
+          "argmax": "6",
+          "rank": 0
+        },
+        {
+          "prompt": "3+4=",
+          "expected": "7",
+          "argmax": "7",
+          "rank": 0
+        },
+        {
+          "prompt": "1+3=",
+          "expected": "4",
+          "argmax": "4",
+          "rank": 0
+        },
+        {
+          "prompt": "2+3=",
+          "expected": "5",
+          "argmax": "5",
+          "rank": 0
+        }
+      ],
+      "argmax_to_four": 6,
+      "argmax_changed": 6,
+      "ctrl_changed": 0,
+      "mean_direction": 2.4791666666666665
+    },
+    {
+      "name": "full",
+      "mode": "full",
+      "k": 0,
+      "pos_mode": "full",
+      "five_rows": [
+        {
+          "prompt": "5+2=",
+          "donor": "4+2=",
+          "five_answer": "7",
+          "four_answer": "6",
+          "argmax": "6",
+          "five_rank": 6,
+          "four_rank": 0,
+          "direction": 2.25
+        },
+        {
+          "prompt": "5+3=",
+          "donor": "4+3=",
+          "five_answer": "8",
+          "four_answer": "7",
+          "argmax": "7",
+          "five_rank": 3,
+          "four_rank": 0,
+          "direction": 1.375
+        },
+        {
+          "prompt": "5+1=",
+          "donor": "4+1=",
+          "five_answer": "6",
+          "four_answer": "5",
+          "argmax": "5",
+          "five_rank": 7,
+          "four_rank": 0,
+          "direction": 2.5
+        },
+        {
+          "prompt": "5-2=",
+          "donor": "4-2=",
+          "five_answer": "3",
+          "four_answer": "2",
+          "argmax": "2",
+          "five_rank": 6,
+          "four_rank": 0,
+          "direction": 2.75
+        },
+        {
+          "prompt": "5-3=",
+          "donor": "4-3=",
+          "five_answer": "2",
+          "four_answer": "1",
+          "argmax": "1",
+          "five_rank": 2,
+          "four_rank": 0,
+          "direction": 2.875
+        },
+        {
+          "prompt": "5-1=",
+          "donor": "4-1=",
+          "five_answer": "4",
+          "four_answer": "3",
+          "argmax": "3",
+          "five_rank": 6,
+          "four_rank": 0,
+          "direction": 3.375
+        }
+      ],
+      "four_rows": [
+        {
+          "prompt": "4+2=",
+          "expected": "6",
+          "argmax": "6",
+          "rank": 0
+        },
+        {
+          "prompt": "4+3=",
+          "expected": "7",
+          "argmax": "7",
+          "rank": 0
+        },
+        {
+          "prompt": "4+1=",
+          "expected": "5",
+          "argmax": "5",
+          "rank": 0
+        },
+        {
+          "prompt": "4-2=",
+          "expected": "2",
+          "argmax": "2",
+          "rank": 0
+        },
+        {
+          "prompt": "4-3=",
+          "expected": "1",
+          "argmax": "1",
+          "rank": 0
+        },
+        {
+          "prompt": "4-1=",
+          "expected": "3",
+          "argmax": "3",
+          "rank": 0
+        }
+      ],
+      "ctrl_rows": [
+        {
+          "prompt": "1+1=",
+          "expected": "2",
+          "argmax": "2",
+          "rank": 0
+        },
+        {
+          "prompt": "1+2=",
+          "expected": "3",
+          "argmax": "3",
+          "rank": 0
+        },
+        {
+          "prompt": "2+4=",
+          "expected": "6",
+          "argmax": "6",
+          "rank": 0
+        },
+        {
+          "prompt": "3+4=",
+          "expected": "7",
+          "argmax": "7",
+          "rank": 0
+        },
+        {
+          "prompt": "1+3=",
+          "expected": "4",
+          "argmax": "4",
+          "rank": 0
+        },
+        {
+          "prompt": "2+3=",
+          "expected": "5",
+          "argmax": "5",
+          "rank": 0
+        }
+      ],
+      "argmax_to_four": 6,
+      "argmax_changed": 6,
+      "ctrl_changed": 0,
+      "mean_direction": 2.5208333333333335
+    },
+    {
+      "name": "rand128",
+      "mode": "random",
+      "k": 128,
+      "pos_mode": "all",
+      "five_rows": [
+        {
+          "prompt": "5+2=",
+          "donor": "4+2=",
+          "five_answer": "7",
+          "four_answer": "6",
+          "argmax": "7",
+          "five_rank": 0,
+          "four_rank": 8,
+          "direction": -2.5
+        },
+        {
+          "prompt": "5+3=",
+          "donor": "4+3=",
+          "five_answer": "8",
+          "four_answer": "7",
+          "argmax": "8",
+          "five_rank": 0,
+          "four_rank": 6,
+          "direction": -2.25
+        },
+        {
+          "prompt": "5+1=",
+          "donor": "4+1=",
+          "five_answer": "6",
+          "four_answer": "5",
+          "argmax": "6",
+          "five_rank": 0,
+          "four_rank": 8,
+          "direction": -2.125
+        },
+        {
+          "prompt": "5-2=",
+          "donor": "4-2=",
+          "five_answer": "3",
+          "four_answer": "2",
+          "argmax": "3",
+          "five_rank": 0,
+          "four_rank": 4,
+          "direction": -2.375
+        },
+        {
+          "prompt": "5-3=",
+          "donor": "4-3=",
+          "five_answer": "2",
+          "four_answer": "1",
+          "argmax": "2",
+          "five_rank": 0,
+          "four_rank": 1,
+          "direction": -2.125
+        },
+        {
+          "prompt": "5-1=",
+          "donor": "4-1=",
+          "five_answer": "4",
+          "four_answer": "3",
+          "argmax": "4",
+          "five_rank": 0,
+          "four_rank": 6,
+          "direction": -2.875
+        }
+      ],
+      "four_rows": [
+        {
+          "prompt": "4+2=",
+          "expected": "6",
+          "argmax": "6",
+          "rank": 0
+        },
+        {
+          "prompt": "4+3=",
+          "expected": "7",
+          "argmax": "7",
+          "rank": 0
+        },
+        {
+          "prompt": "4+1=",
+          "expected": "5",
+          "argmax": "5",
+          "rank": 0
+        },
+        {
+          "prompt": "4-2=",
+          "expected": "2",
+          "argmax": "2",
+          "rank": 0
+        },
+        {
+          "prompt": "4-3=",
+          "expected": "1",
+          "argmax": "1",
+          "rank": 0
+        },
+        {
+          "prompt": "4-1=",
+          "expected": "3",
+          "argmax": "3",
+          "rank": 0
+        }
+      ],
+      "ctrl_rows": [
+        {
+          "prompt": "1+1=",
+          "expected": "2",
+          "argmax": "2",
+          "rank": 0
+        },
+        {
+          "prompt": "1+2=",
+          "expected": "3",
+          "argmax": "3",
+          "rank": 0
+        },
+        {
+          "prompt": "2+4=",
+          "expected": "6",
+          "argmax": "6",
+          "rank": 0
+        },
+        {
+          "prompt": "3+4=",
+          "expected": "7",
+          "argmax": "7",
+          "rank": 0
+        },
+        {
+          "prompt": "1+3=",
+          "expected": "4",
+          "argmax": "4",
+          "rank": 0
+        },
+        {
+          "prompt": "2+3=",
+          "expected": "5",
+          "argmax": "5",
+          "rank": 0
+        }
+      ],
+      "argmax_to_four": 0,
+      "argmax_changed": 0,
+      "ctrl_changed": 0,
+      "mean_direction": -2.375
+    },
+    {
+      "name": "restored",
+      "mode": "none",
+      "k": 0,
+      "pos_mode": "none",
+      "five_rows": [
+        {
+          "prompt": "5+2=",
+          "donor": "4+2=",
+          "five_answer": "7",
+          "four_answer": "6",
+          "argmax": "7",
+          "five_rank": 0,
+          "four_rank": 8,
+          "direction": -2.375
+        },
+        {
+          "prompt": "5+3=",
+          "donor": "4+3=",
+          "five_answer": "8",
+          "four_answer": "7",
+          "argmax": "8",
+          "five_rank": 0,
+          "four_rank": 6,
+          "direction": -2.125
+        },
+        {
+          "prompt": "5+1=",
+          "donor": "4+1=",
+          "five_answer": "6",
+          "four_answer": "5",
+          "argmax": "6",
+          "five_rank": 0,
+          "four_rank": 8,
+          "direction": -2.125
+        },
+        {
+          "prompt": "5-2=",
+          "donor": "4-2=",
+          "five_answer": "3",
+          "four_answer": "2",
+          "argmax": "3",
+          "five_rank": 0,
+          "four_rank": 5,
+          "direction": -2.375
+        },
+        {
+          "prompt": "5-3=",
+          "donor": "4-3=",
+          "five_answer": "2",
+          "four_answer": "1",
+          "argmax": "2",
+          "five_rank": 0,
+          "four_rank": 1,
+          "direction": -2.25
+        },
+        {
+          "prompt": "5-1=",
+          "donor": "4-1=",
+          "five_answer": "4",
+          "four_answer": "3",
+          "argmax": "4",
+          "five_rank": 0,
+          "four_rank": 5,
+          "direction": -2.875
+        }
+      ],
+      "four_rows": [
+        {
+          "prompt": "4+2=",
+          "expected": "6",
+          "argmax": "6",
+          "rank": 0
+        },
+        {
+          "prompt": "4+3=",
+          "expected": "7",
+          "argmax": "7",
+          "rank": 0
+        },
+        {
+          "prompt": "4+1=",
+          "expected": "5",
+          "argmax": "5",
+          "rank": 0
+        },
+        {
+          "prompt": "4-2=",
+          "expected": "2",
+          "argmax": "2",
+          "rank": 0
+        },
+        {
+          "prompt": "4-3=",
+          "expected": "1",
+          "argmax": "1",
+          "rank": 0
+        },
+        {
+          "prompt": "4-1=",
+          "expected": "3",
+          "argmax": "3",
+          "rank": 0
+        }
+      ],
+      "ctrl_rows": [
+        {
+          "prompt": "1+1=",
+          "expected": "2",
+          "argmax": "2",
+          "rank": 0
+        },
+        {
+          "prompt": "1+2=",
+          "expected": "3",
+          "argmax": "3",
+          "rank": 0
+        },
+        {
+          "prompt": "2+4=",
+          "expected": "6",
+          "argmax": "6",
+          "rank": 0
+        },
+        {
+          "prompt": "3+4=",
+          "expected": "7",
+          "argmax": "7",
+          "rank": 0
+        },
+        {
+          "prompt": "1+3=",
+          "expected": "4",
+          "argmax": "4",
+          "rank": 0
+        },
+        {
+          "prompt": "2+3=",
+          "expected": "5",
+          "argmax": "5",
+          "rank": 0
+        }
+      ],
+      "argmax_to_four": 0,
+      "argmax_changed": 0,
+      "ctrl_changed": 0,
+      "mean_direction": -2.3541666666666665
+    }
+  ],
+  "restoration": {
+    "bit_exact": false,
+    "max_diff": 4.9375
+  },
+  "seconds": 121.21383690834045
+}

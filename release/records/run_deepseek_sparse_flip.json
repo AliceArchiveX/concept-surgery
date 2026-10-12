@@ -1,0 +1,694 @@
+{
+  "settings": {
+    "pairs": [
+      [
+        "5+2=",
+        "4+2=",
+        "7",
+        "6"
+      ],
+      [
+        "5+3=",
+        "4+3=",
+        "8",
+        "7"
+      ],
+      [
+        "5+1=",
+        "4+1=",
+        "6",
+        "5"
+      ],
+      [
+        "5-2=",
+        "4-2=",
+        "3",
+        "2"
+      ],
+      [
+        "5-3=",
+        "4-3=",
+        "2",
+        "1"
+      ],
+      [
+        "5-1=",
+        "4-1=",
+        "4",
+        "3"
+      ]
+    ],
+    "controls": [
+      [
+        "1+1=",
+        "2"
+      ],
+      [
+        "2+3=",
+        "5"
+      ],
+      [
+        "3+4=",
+        "7"
+      ],
+      [
+        "6-2=",
+        "4"
+      ]
+    ],
+    "conditions": [
+      "top32",
+      "top128",
+      "random128",
+      "last5_top128",
+      "restored"
+    ],
+    "random_seed": 42,
+    "control_intervention": "add the mean paired donor-minus-target delta to selected units at all positions",
+    "note": "cell selection method is not part of this release; the table itself is in deepseek_tables.json"
+  },
+  "results": {
+    "settings": {
+      "pairs": [
+        [
+          "5+2=",
+          "4+2=",
+          "7",
+          "6"
+        ],
+        [
+          "5+3=",
+          "4+3=",
+          "8",
+          "7"
+        ],
+        [
+          "5+1=",
+          "4+1=",
+          "6",
+          "5"
+        ],
+        [
+          "5-2=",
+          "4-2=",
+          "3",
+          "2"
+        ],
+        [
+          "5-3=",
+          "4-3=",
+          "2",
+          "1"
+        ],
+        [
+          "5-1=",
+          "4-1=",
+          "4",
+          "3"
+        ]
+      ],
+      "controls": [
+        [
+          "1+1=",
+          "2"
+        ],
+        [
+          "2+3=",
+          "5"
+        ],
+        [
+          "3+4=",
+          "7"
+        ],
+        [
+          "6-2=",
+          "4"
+        ]
+      ],
+      "conditions": [
+        "top32",
+        "top128",
+        "random128",
+        "last5_top128",
+        "restored"
+      ],
+      "random_seed": 42,
+      "selection": "mean absolute paired difference at first number, without output-weight weighting",
+      "control_intervention": "add the mean paired donor-minus-target delta to selected units at all positions"
+    },
+    "results": [
+      {
+        "condition": "baseline",
+        "rows": [
+          {
+            "prompt": "5+2=",
+            "donor": "4+2=",
+            "original": "7",
+            "target": "6",
+            "argmax": "7",
+            "original_rank": 0,
+            "target_rank": 7,
+            "direction_margin": -4.25
+          },
+          {
+            "prompt": "5+3=",
+            "donor": "4+3=",
+            "original": "8",
+            "target": "7",
+            "argmax": "8",
+            "original_rank": 0,
+            "target_rank": 7,
+            "direction_margin": -3.875
+          },
+          {
+            "prompt": "5+1=",
+            "donor": "4+1=",
+            "original": "6",
+            "target": "5",
+            "argmax": "6",
+            "original_rank": 0,
+            "target_rank": 7,
+            "direction_margin": -3.875
+          },
+          {
+            "prompt": "5-2=",
+            "donor": "4-2=",
+            "original": "3",
+            "target": "2",
+            "argmax": "3",
+            "original_rank": 0,
+            "target_rank": 2,
+            "direction_margin": -4.0
+          },
+          {
+            "prompt": "5-3=",
+            "donor": "4-3=",
+            "original": "2",
+            "target": "1",
+            "argmax": "2",
+            "original_rank": 0,
+            "target_rank": 4,
+            "direction_margin": -4.375
+          },
+          {
+            "prompt": "5-1=",
+            "donor": "4-1=",
+            "original": "4",
+            "target": "3",
+            "argmax": "4",
+            "original_rank": 0,
+            "target_rank": 4,
+            "direction_margin": -4.25
+          }
+        ],
+        "controls": [
+          {
+            "prompt": "1+1=",
+            "expected": "2",
+            "argmax": "2"
+          },
+          {
+            "prompt": "2+3=",
+            "expected": "5",
+            "argmax": "5"
+          },
+          {
+            "prompt": "3+4=",
+            "expected": "7",
+            "argmax": "7"
+          },
+          {
+            "prompt": "6-2=",
+            "expected": "4",
+            "argmax": "4"
+          }
+        ],
+        "to_four": 0,
+        "donor_max_logit_difference": 0.0,
+        "finite": true,
+        "seconds": 0
+      },
+      {
+        "condition": "top32",
+        "rows": [
+          {
+            "prompt": "5+2=",
+            "donor": "4+2=",
+            "original": "7",
+            "target": "6",
+            "argmax": "7",
+            "original_rank": 0,
+            "target_rank": 1,
+            "direction_margin": -0.125
+          },
+          {
+            "prompt": "5+3=",
+            "donor": "4+3=",
+            "original": "8",
+            "target": "7",
+            "argmax": "7",
+            "original_rank": 1,
+            "target_rank": 0,
+            "direction_margin": 1.0
+          },
+          {
+            "prompt": "5+1=",
+            "donor": "4+1=",
+            "original": "6",
+            "target": "5",
+            "argmax": "5",
+            "original_rank": 1,
+            "target_rank": 0,
+            "direction_margin": 0.625
+          },
+          {
+            "prompt": "5-2=",
+            "donor": "4-2=",
+            "original": "3",
+            "target": "2",
+            "argmax": "2",
+            "original_rank": 1,
+            "target_rank": 0,
+            "direction_margin": 1.0
+          },
+          {
+            "prompt": "5-3=",
+            "donor": "4-3=",
+            "original": "2",
+            "target": "1",
+            "argmax": "1",
+            "original_rank": 1,
+            "target_rank": 0,
+            "direction_margin": 3.625
+          },
+          {
+            "prompt": "5-1=",
+            "donor": "4-1=",
+            "original": "4",
+            "target": "3",
+            "argmax": "3",
+            "original_rank": 3,
+            "target_rank": 0,
+            "direction_margin": 3.75
+          }
+        ],
+        "controls": [
+          {
+            "prompt": "1+1=",
+            "expected": "2",
+            "argmax": "2"
+          },
+          {
+            "prompt": "2+3=",
+            "expected": "5",
+            "argmax": "5"
+          },
+          {
+            "prompt": "3+4=",
+            "expected": "7",
+            "argmax": "7"
+          },
+          {
+            "prompt": "6-2=",
+            "expected": "4",
+            "argmax": "2"
+          }
+        ],
+        "to_four": 5,
+        "donor_max_logit_difference": 0.0,
+        "finite": true,
+        "seconds": 110.08236646652222
+      },
+      {
+        "condition": "top128",
+        "rows": [
+          {
+            "prompt": "5+2=",
+            "donor": "4+2=",
+            "original": "7",
+            "target": "6",
+            "argmax": "6",
+            "original_rank": 1,
+            "target_rank": 0,
+            "direction_margin": 1.5
+          },
+          {
+            "prompt": "5+3=",
+            "donor": "4+3=",
+            "original": "8",
+            "target": "7",
+            "argmax": "7",
+            "original_rank": 2,
+            "target_rank": 0,
+            "direction_margin": 1.75
+          },
+          {
+            "prompt": "5+1=",
+            "donor": "4+1=",
+            "original": "6",
+            "target": "5",
+            "argmax": "5",
+            "original_rank": 1,
+            "target_rank": 0,
+            "direction_margin": 1.5
+          },
+          {
+            "prompt": "5-2=",
+            "donor": "4-2=",
+            "original": "3",
+            "target": "2",
+            "argmax": "2",
+            "original_rank": 1,
+            "target_rank": 0,
+            "direction_margin": 1.625
+          },
+          {
+            "prompt": "5-3=",
+            "donor": "4-3=",
+            "original": "2",
+            "target": "1",
+            "argmax": "1",
+            "original_rank": 1,
+            "target_rank": 0,
+            "direction_margin": 3.875
+          },
+          {
+            "prompt": "5-1=",
+            "donor": "4-1=",
+            "original": "4",
+            "target": "3",
+            "argmax": "3",
+            "original_rank": 4,
+            "target_rank": 0,
+            "direction_margin": 4.25
+          }
+        ],
+        "controls": [
+          {
+            "prompt": "1+1=",
+            "expected": "2",
+            "argmax": "2"
+          },
+          {
+            "prompt": "2+3=",
+            "expected": "5",
+            "argmax": "5"
+          },
+          {
+            "prompt": "3+4=",
+            "expected": "7",
+            "argmax": "7"
+          },
+          {
+            "prompt": "6-2=",
+            "expected": "4",
+            "argmax": "2"
+          }
+        ],
+        "to_four": 6,
+        "donor_max_logit_difference": 0.0,
+        "finite": true,
+        "seconds": 107.95681357383728
+      },
+      {
+        "condition": "random128",
+        "rows": [
+          {
+            "prompt": "5+2=",
+            "donor": "4+2=",
+            "original": "7",
+            "target": "6",
+            "argmax": "7",
+            "original_rank": 0,
+            "target_rank": 7,
+            "direction_margin": -4.125
+          },
+          {
+            "prompt": "5+3=",
+            "donor": "4+3=",
+            "original": "8",
+            "target": "7",
+            "argmax": "8",
+            "original_rank": 0,
+            "target_rank": 7,
+            "direction_margin": -3.875
+          },
+          {
+            "prompt": "5+1=",
+            "donor": "4+1=",
+            "original": "6",
+            "target": "5",
+            "argmax": "6",
+            "original_rank": 0,
+            "target_rank": 8,
+            "direction_margin": -3.75
+          },
+          {
+            "prompt": "5-2=",
+            "donor": "4-2=",
+            "original": "3",
+            "target": "2",
+            "argmax": "3",
+            "original_rank": 0,
+            "target_rank": 3,
+            "direction_margin": -4.625
+          },
+          {
+            "prompt": "5-3=",
+            "donor": "4-3=",
+            "original": "2",
+            "target": "1",
+            "argmax": "2",
+            "original_rank": 0,
+            "target_rank": 2,
+            "direction_margin": -4.125
+          },
+          {
+            "prompt": "5-1=",
+            "donor": "4-1=",
+            "original": "4",
+            "target": "3",
+            "argmax": "4",
+            "original_rank": 0,
+            "target_rank": 7,
+            "direction_margin": -5.0625
+          }
+        ],
+        "controls": [
+          {
+            "prompt": "1+1=",
+            "expected": "2",
+            "argmax": "2"
+          },
+          {
+            "prompt": "2+3=",
+            "expected": "5",
+            "argmax": "5"
+          },
+          {
+            "prompt": "3+4=",
+            "expected": "7",
+            "argmax": "7"
+          },
+          {
+            "prompt": "6-2=",
+            "expected": "4",
+            "argmax": "4"
+          }
+        ],
+        "to_four": 0,
+        "donor_max_logit_difference": 0.0,
+        "finite": true,
+        "seconds": 107.30650591850281
+      },
+      {
+        "condition": "last5_top128",
+        "rows": [
+          {
+            "prompt": "5+2=",
+            "donor": "4+2=",
+            "original": "7",
+            "target": "6",
+            "argmax": "7",
+            "original_rank": 0,
+            "target_rank": 7,
+            "direction_margin": -4.375
+          },
+          {
+            "prompt": "5+3=",
+            "donor": "4+3=",
+            "original": "8",
+            "target": "7",
+            "argmax": "8",
+            "original_rank": 0,
+            "target_rank": 14,
+            "direction_margin": -4.375
+          },
+          {
+            "prompt": "5+1=",
+            "donor": "4+1=",
+            "original": "6",
+            "target": "5",
+            "argmax": "6",
+            "original_rank": 0,
+            "target_rank": 11,
+            "direction_margin": -4.25
+          },
+          {
+            "prompt": "5-2=",
+            "donor": "4-2=",
+            "original": "3",
+            "target": "2",
+            "argmax": "3",
+            "original_rank": 0,
+            "target_rank": 2,
+            "direction_margin": -4.125
+          },
+          {
+            "prompt": "5-3=",
+            "donor": "4-3=",
+            "original": "2",
+            "target": "1",
+            "argmax": "2",
+            "original_rank": 0,
+            "target_rank": 3,
+            "direction_margin": -4.625
+          },
+          {
+            "prompt": "5-1=",
+            "donor": "4-1=",
+            "original": "4",
+            "target": "3",
+            "argmax": "4",
+            "original_rank": 0,
+            "target_rank": 5,
+            "direction_margin": -4.375
+          }
+        ],
+        "controls": [
+          {
+            "prompt": "1+1=",
+            "expected": "2",
+            "argmax": "2"
+          },
+          {
+            "prompt": "2+3=",
+            "expected": "5",
+            "argmax": "5"
+          },
+          {
+            "prompt": "3+4=",
+            "expected": "7",
+            "argmax": "7"
+          },
+          {
+            "prompt": "6-2=",
+            "expected": "4",
+            "argmax": "4"
+          }
+        ],
+        "to_four": 0,
+        "donor_max_logit_difference": 0.0,
+        "finite": true,
+        "seconds": 106.48696684837341
+      },
+      {
+        "condition": "restored",
+        "rows": [
+          {
+            "prompt": "5+2=",
+            "donor": "4+2=",
+            "original": "7",
+            "target": "6",
+            "argmax": "7",
+            "original_rank": 0,
+            "target_rank": 7,
+            "direction_margin": -4.25
+          },
+          {
+            "prompt": "5+3=",
+            "donor": "4+3=",
+            "original": "8",
+            "target": "7",
+            "argmax": "8",
+            "original_rank": 0,
+            "target_rank": 7,
+            "direction_margin": -3.875
+          },
+          {
+            "prompt": "5+1=",
+            "donor": "4+1=",
+            "original": "6",
+            "target": "5",
+            "argmax": "6",
+            "original_rank": 0,
+            "target_rank": 7,
+            "direction_margin": -3.875
+          },
+          {
+            "prompt": "5-2=",
+            "donor": "4-2=",
+            "original": "3",
+            "target": "2",
+            "argmax": "3",
+            "original_rank": 0,
+            "target_rank": 2,
+            "direction_margin": -4.0
+          },
+          {
+            "prompt": "5-3=",
+            "donor": "4-3=",
+            "original": "2",
+            "target": "1",
+            "argmax": "2",
+            "original_rank": 0,
+            "target_rank": 4,
+            "direction_margin": -4.375
+          },
+          {
+            "prompt": "5-1=",
+            "donor": "4-1=",
+            "original": "4",
+            "target": "3",
+            "argmax": "4",
+            "original_rank": 0,
+            "target_rank": 4,
+            "direction_margin": -4.25
+          }
+        ],
+        "controls": [
+          {
+            "prompt": "1+1=",
+            "expected": "2",
+            "argmax": "2"
+          },
+          {
+            "prompt": "2+3=",
+            "expected": "5",
+            "argmax": "5"
+          },
+          {
+            "prompt": "3+4=",
+            "expected": "7",
+            "argmax": "7"
+          },
+          {
+            "prompt": "6-2=",
+            "expected": "4",
+            "argmax": "4"
+          }
+        ],
+        "to_four": 0,
+        "donor_max_logit_difference": 0.0,
+        "finite": true,
+        "seconds": 106.56708097457886
+      }
+    ],
+    "loaded_and_capture_seconds": 358.2632780075073,
+    "restoration": {
+      "bit_exact": true,
+      "max_difference": 0.0
+    },
+    "total_seconds": 896.8034353256226
+  }
+}

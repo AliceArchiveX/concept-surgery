@@ -1,0 +1,405 @@
+{
+  "settings": {
+    "pairs": [
+      [
+        "Is 25 equal to 16? Answer:",
+        "Is 25 equal to 16? Answer:",
+        " No",
+        " Yes"
+      ],
+      [
+        "Does 25 have the same value as 16? Answer:",
+        "Does 25 have the same value as 16? Answer:",
+        " No",
+        " Yes"
+      ],
+      [
+        "25 - 16 =",
+        "25 - 16 =",
+        "9",
+        "0"
+      ],
+      [
+        "Is 24 equal to 25? Answer:",
+        "Is 24 equal to 25? Answer:",
+        " No",
+        " Yes"
+      ],
+      [
+        "Is 25 equal to 30? Answer:",
+        "Is 25 equal to 30? Answer:",
+        " No",
+        " No"
+      ],
+      [
+        "The number after 24 is",
+        "The number after 24 is",
+        " 25",
+        " 25"
+      ]
+    ],
+    "controls": [
+      [
+        "Is 30 equal to 16? Answer:",
+        " No"
+      ],
+      [
+        "30 - 16 =",
+        "14"
+      ],
+      [
+        "Is 13 equal to 14? Answer:",
+        " No"
+      ]
+    ],
+    "note": "Cell tables in tables.json."
+  },
+  "results": [
+    {
+      "name": "baseline",
+      "rows": [
+        {
+          "prompt": "Is 25 equal to 16? Answer:",
+          "A_expect": " No",
+          "B_expect": " Yes",
+          "argmax": " no",
+          "top5": [
+            " No",
+            " no",
+            " False",
+            " ",
+            " false"
+          ],
+          "A_rank": 0,
+          "B_rank": 6
+        },
+        {
+          "prompt": "Does 25 have the same value as 16? Answer:",
+          "A_expect": " No",
+          "B_expect": " Yes",
+          "argmax": " No",
+          "top5": [
+            " No",
+            " no",
+            " ",
+            " Yes",
+            " False"
+          ],
+          "A_rank": 0,
+          "B_rank": 3
+        },
+        {
+          "prompt": "25 - 16 =",
+          "A_expect": "9",
+          "B_expect": "0",
+          "argmax": " ",
+          "top5": [
+            " ",
+            " -",
+            " \\",
+            " (",
+            " x"
+          ],
+          "A_rank": 39,
+          "B_rank": 58
+        },
+        {
+          "prompt": "Is 24 equal to 25? Answer:",
+          "A_expect": " No",
+          "B_expect": " Yes",
+          "argmax": " No",
+          "top5": [
+            " No",
+            " no",
+            " ",
+            " False",
+            " Yes"
+          ],
+          "A_rank": 0,
+          "B_rank": 4
+        },
+        {
+          "prompt": "Is 25 equal to 30? Answer:",
+          "A_expect": " No",
+          "B_expect": " No",
+          "argmax": " no",
+          "top5": [
+            " no",
+            " No",
+            " False",
+            " ",
+            " false"
+          ],
+          "A_rank": 0,
+          "B_rank": 0
+        },
+        {
+          "prompt": "The number after 24 is",
+          "A_expect": " 25",
+          "B_expect": " 25",
+          "argmax": " __",
+          "top5": [
+            " __",
+            " ",
+            "____",
+            " ____",
+            " ("
+          ],
+          "A_rank": 1,
+          "B_rank": 1
+        }
+      ],
+      "ctrl_rows": [
+        {
+          "prompt": "Is 30 equal to 16? Answer:",
+          "expected": " No",
+          "argmax": " no",
+          "rank": 1
+        },
+        {
+          "prompt": "30 - 16 =",
+          "expected": "14",
+          "argmax": " ",
+          "rank": 22
+        },
+        {
+          "prompt": "Is 13 equal to 14? Answer:",
+          "expected": " No",
+          "argmax": " no",
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "name": "all128",
+      "rows": [
+        {
+          "prompt": "Is 25 equal to 16? Answer:",
+          "A_expect": " No",
+          "B_expect": " Yes",
+          "argmax": " No",
+          "top5": [
+            " No",
+            " no",
+            " ",
+            " False",
+            " The"
+          ],
+          "A_rank": 0,
+          "B_rank": 6
+        },
+        {
+          "prompt": "Does 25 have the same value as 16? Answer:",
+          "A_expect": " No",
+          "B_expect": " Yes",
+          "argmax": " No",
+          "top5": [
+            " No",
+            " ",
+            " no",
+            " Yes",
+            " The"
+          ],
+          "A_rank": 0,
+          "B_rank": 3
+        },
+        {
+          "prompt": "25 - 16 =",
+          "A_expect": "9",
+          "B_expect": "0",
+          "argmax": " ",
+          "top5": [
+            " ",
+            " \\",
+            " -",
+            " (",
+            " x"
+          ],
+          "A_rank": 108,
+          "B_rank": 100
+        },
+        {
+          "prompt": "Is 24 equal to 25? Answer:",
+          "A_expect": " No",
+          "B_expect": " Yes",
+          "argmax": " No",
+          "top5": [
+            " No",
+            " no",
+            " ",
+            " False",
+            " Yes"
+          ],
+          "A_rank": 0,
+          "B_rank": 4
+        },
+        {
+          "prompt": "Is 25 equal to 30? Answer:",
+          "A_expect": " No",
+          "B_expect": " No",
+          "argmax": " No",
+          "top5": [
+            " No",
+            " no",
+            " ",
+            " False",
+            " NO"
+          ],
+          "A_rank": 0,
+          "B_rank": 0
+        },
+        {
+          "prompt": "The number after 24 is",
+          "A_expect": " 25",
+          "B_expect": " 25",
+          "argmax": " __",
+          "top5": [
+            " __",
+            " ",
+            " ____",
+            "____",
+            " ("
+          ],
+          "A_rank": 1,
+          "B_rank": 1
+        }
+      ],
+      "ctrl_rows": [
+        {
+          "prompt": "Is 30 equal to 16? Answer:",
+          "expected": " No",
+          "argmax": " No",
+          "rank": 0
+        },
+        {
+          "prompt": "30 - 16 =",
+          "expected": "14",
+          "argmax": " ",
+          "rank": 47
+        },
+        {
+          "prompt": "Is 13 equal to 14? Answer:",
+          "expected": " No",
+          "argmax": " No",
+          "rank": 0
+        }
+      ]
+    },
+    {
+      "name": "rand128",
+      "rows": [
+        {
+          "prompt": "Is 25 equal to 16? Answer:",
+          "A_expect": " No",
+          "B_expect": " Yes",
+          "argmax": " no",
+          "top5": [
+            " no",
+            " No",
+            " False",
+            " ",
+            " false"
+          ],
+          "A_rank": 0,
+          "B_rank": 6
+        },
+        {
+          "prompt": "Does 25 have the same value as 16? Answer:",
+          "A_expect": " No",
+          "B_expect": " Yes",
+          "argmax": " No",
+          "top5": [
+            " No",
+            " no",
+            " ",
+            " Yes",
+            " False"
+          ],
+          "A_rank": 0,
+          "B_rank": 3
+        },
+        {
+          "prompt": "25 - 16 =",
+          "A_expect": "9",
+          "B_expect": "0",
+          "argmax": " ",
+          "top5": [
+            " ",
+            " -",
+            " \\",
+            " (",
+            " x"
+          ],
+          "A_rank": 40,
+          "B_rank": 64
+        },
+        {
+          "prompt": "Is 24 equal to 25? Answer:",
+          "A_expect": " No",
+          "B_expect": " Yes",
+          "argmax": " No",
+          "top5": [
+            " No",
+            " no",
+            " ",
+            " False",
+            " Yes"
+          ],
+          "A_rank": 0,
+          "B_rank": 4
+        },
+        {
+          "prompt": "Is 25 equal to 30? Answer:",
+          "A_expect": " No",
+          "B_expect": " No",
+          "argmax": " No",
+          "top5": [
+            " No",
+            " no",
+            " False",
+            " ",
+            " false"
+          ],
+          "A_rank": 0,
+          "B_rank": 0
+        },
+        {
+          "prompt": "The number after 24 is",
+          "A_expect": " 25",
+          "B_expect": " 25",
+          "argmax": " __",
+          "top5": [
+            " __",
+            " ",
+            "____",
+            " ____",
+            " ("
+          ],
+          "A_rank": 1,
+          "B_rank": 1
+        }
+      ],
+      "ctrl_rows": [
+        {
+          "prompt": "Is 30 equal to 16? Answer:",
+          "expected": " No",
+          "argmax": " No",
+          "rank": 0
+        },
+        {
+          "prompt": "30 - 16 =",
+          "expected": "14",
+          "argmax": " ",
+          "rank": 22
+        },
+        {
+          "prompt": "Is 13 equal to 14? Answer:",
+          "expected": " No",
+          "argmax": " no",
+          "rank": 1
+        }
+      ]
+    }
+  ],
+  "seconds": 61.08392071723938
+}

@@ -1,0 +1,622 @@
+{
+  "settings": {
+    "pairs": [
+      [
+        "The list is 5 5 5 5 5. The number of items in the list is",
+        "The list is 4 4 4 4 4. The number of items in the list is",
+        "5",
+        "4"
+      ],
+      [
+        "I count 5 5 5 and one more 5. The total is",
+        "I count 4 4 4 and one more 4. The total is",
+        "4",
+        "3"
+      ],
+      [
+        "Here are 5 apples and here are 5 apples. Altogether there are",
+        "Here are 4 apples and here are 4 apples. Altogether there are",
+        "10",
+        "8"
+      ],
+      [
+        "5 5 5 5 5 5 5 - the count of numbers shown is",
+        "4 4 4 4 4 4 4 - the count of numbers shown is",
+        "7",
+        "7"
+      ],
+      [
+        "Each box has 5 balls and there are 2 boxes. The total number of balls is",
+        "Each box has 4 balls and there are 2 boxes. The total number of balls is",
+        "10",
+        "8"
+      ],
+      [
+        "A farmer has 5 sheep and buys 5 more sheep. The farmer now has",
+        "A farmer has 4 sheep and buys 4 more sheep. The farmer now has",
+        "10",
+        "8"
+      ]
+    ],
+    "controls": [
+      [
+        "Each box has 3 balls and there are 2 boxes. The total number of balls is",
+        "6"
+      ],
+      [
+        "A farmer has 7 sheep and buys 2 more sheep. The farmer now has",
+        "9"
+      ],
+      [
+        "Here are 6 apples and here are 3 apples. Altogether there are",
+        "9"
+      ],
+      [
+        "The list is 2 2 2 2 2. The number of items in the list is",
+        "5"
+      ]
+    ],
+    "conditions": [
+      [
+        "baseline",
+        "none",
+        0,
+        "none"
+      ],
+      [
+        "all128",
+        "patch",
+        128,
+        "all"
+      ],
+      [
+        "rand128",
+        "random",
+        128,
+        "all"
+      ],
+      [
+        "restored",
+        "none",
+        0,
+        "none"
+      ]
+    ],
+    "note": "all128 condition = position-0-scored top128 cells patched at ALL positions with per-prompt matched donor."
+  },
+  "results": [
+    {
+      "name": "baseline",
+      "five_rows": [
+        {
+          "prompt": "The list is 5 5 5 5 5. The number of items in the list is",
+          "donor": "The list is 4 4 4 4 4. The number of items in the list is",
+          "five_answer": "5",
+          "four_answer": "4",
+          "argmax": " ",
+          "five_rank": 119,
+          "four_rank": 366,
+          "direction": -2.125
+        },
+        {
+          "prompt": "I count 5 5 5 and one more 5. The total is",
+          "donor": "I count 4 4 4 and one more 4. The total is",
+          "five_answer": "4",
+          "four_answer": "3",
+          "argmax": " ",
+          "five_rank": 283,
+          "four_rank": 293,
+          "direction": -0.0625
+        },
+        {
+          "prompt": "Here are 5 apples and here are 5 apples. Altogether there are",
+          "donor": "Here are 4 apples and here are 4 apples. Altogether there are",
+          "five_answer": "10",
+          "four_answer": "8",
+          "argmax": " ",
+          "five_rank": 20,
+          "four_rank": 526,
+          "direction": -6.0625
+        },
+        {
+          "prompt": "5 5 5 5 5 5 5 - the count of numbers shown is",
+          "donor": "4 4 4 4 4 4 4 - the count of numbers shown is",
+          "five_answer": "7",
+          "four_answer": "7",
+          "argmax": " ",
+          "five_rank": 1165,
+          "four_rank": 1165,
+          "direction": 0.0
+        },
+        {
+          "prompt": "Each box has 5 balls and there are 2 boxes. The total number of balls is",
+          "donor": "Each box has 4 balls and there are 2 boxes. The total number of balls is",
+          "five_answer": "10",
+          "four_answer": "8",
+          "argmax": " _____",
+          "five_rank": 202,
+          "four_rank": 675,
+          "direction": -2.4375
+        },
+        {
+          "prompt": "A farmer has 5 sheep and buys 5 more sheep. The farmer now has",
+          "donor": "A farmer has 4 sheep and buys 4 more sheep. The farmer now has",
+          "five_answer": "10",
+          "four_answer": "8",
+          "argmax": " ",
+          "five_rank": 851,
+          "four_rank": 2250,
+          "direction": -1.8125
+        }
+      ],
+      "four_rows": [
+        {
+          "prompt": "The list is 4 4 4 4 4. The number of items in the list is",
+          "expected": "4",
+          "argmax": " ",
+          "rank": 317
+        },
+        {
+          "prompt": "I count 4 4 4 and one more 4. The total is",
+          "expected": "3",
+          "argmax": " ",
+          "rank": 391
+        },
+        {
+          "prompt": "Here are 4 apples and here are 4 apples. Altogether there are",
+          "expected": "8",
+          "argmax": " ",
+          "rank": 47
+        },
+        {
+          "prompt": "4 4 4 4 4 4 4 - the count of numbers shown is",
+          "expected": "7",
+          "argmax": " ",
+          "rank": 1787
+        },
+        {
+          "prompt": "Each box has 4 balls and there are 2 boxes. The total number of balls is",
+          "expected": "8",
+          "argmax": " ",
+          "rank": 639
+        },
+        {
+          "prompt": "A farmer has 4 sheep and buys 4 more sheep. The farmer now has",
+          "expected": "8",
+          "argmax": " _____",
+          "rank": 2128
+        }
+      ],
+      "ctrl_rows": [
+        {
+          "prompt": "Each box has 3 balls and there are 2 boxes. The total number of balls is",
+          "expected": "6",
+          "argmax": " ",
+          "rank": 395
+        },
+        {
+          "prompt": "A farmer has 7 sheep and buys 2 more sheep. The farmer now has",
+          "expected": "9",
+          "argmax": " _____",
+          "rank": 2229
+        },
+        {
+          "prompt": "Here are 6 apples and here are 3 apples. Altogether there are",
+          "expected": "9",
+          "argmax": " ",
+          "rank": 21
+        },
+        {
+          "prompt": "The list is 2 2 2 2 2. The number of items in the list is",
+          "expected": "5",
+          "argmax": " ",
+          "rank": 115
+        }
+      ],
+      "argmax_to_four": 0,
+      "argmax_changed": 0,
+      "ctrl_changed": 0
+    },
+    {
+      "name": "all128",
+      "five_rows": [
+        {
+          "prompt": "The list is 5 5 5 5 5. The number of items in the list is",
+          "donor": "The list is 4 4 4 4 4. The number of items in the list is",
+          "five_answer": "5",
+          "four_answer": "4",
+          "argmax": " ",
+          "five_rank": 100,
+          "four_rank": 328,
+          "direction": -2.1875
+        },
+        {
+          "prompt": "I count 5 5 5 and one more 5. The total is",
+          "donor": "I count 4 4 4 and one more 4. The total is",
+          "five_answer": "4",
+          "four_answer": "3",
+          "argmax": " ",
+          "five_rank": 258,
+          "four_rank": 441,
+          "direction": -1.0625
+        },
+        {
+          "prompt": "Here are 5 apples and here are 5 apples. Altogether there are",
+          "donor": "Here are 4 apples and here are 4 apples. Altogether there are",
+          "five_answer": "10",
+          "four_answer": "8",
+          "argmax": " ",
+          "five_rank": 149,
+          "four_rank": 47,
+          "direction": 2.125
+        },
+        {
+          "prompt": "5 5 5 5 5 5 5 - the count of numbers shown is",
+          "donor": "4 4 4 4 4 4 4 - the count of numbers shown is",
+          "five_answer": "7",
+          "four_answer": "7",
+          "argmax": " ",
+          "five_rank": 1654,
+          "four_rank": 1654,
+          "direction": 0.0
+        },
+        {
+          "prompt": "Each box has 5 balls and there are 2 boxes. The total number of balls is",
+          "donor": "Each box has 4 balls and there are 2 boxes. The total number of balls is",
+          "five_answer": "10",
+          "four_answer": "8",
+          "argmax": " ",
+          "five_rank": 251,
+          "four_rank": 776,
+          "direction": -2.28125
+        },
+        {
+          "prompt": "A farmer has 5 sheep and buys 5 more sheep. The farmer now has",
+          "donor": "A farmer has 4 sheep and buys 4 more sheep. The farmer now has",
+          "five_answer": "10",
+          "four_answer": "8",
+          "argmax": " _____",
+          "five_rank": 790,
+          "four_rank": 1868,
+          "direction": -1.625
+        }
+      ],
+      "four_rows": [
+        {
+          "prompt": "The list is 4 4 4 4 4. The number of items in the list is",
+          "expected": "4",
+          "argmax": " ",
+          "rank": 317
+        },
+        {
+          "prompt": "I count 4 4 4 and one more 4. The total is",
+          "expected": "3",
+          "argmax": " ",
+          "rank": 391
+        },
+        {
+          "prompt": "Here are 4 apples and here are 4 apples. Altogether there are",
+          "expected": "8",
+          "argmax": " ",
+          "rank": 47
+        },
+        {
+          "prompt": "4 4 4 4 4 4 4 - the count of numbers shown is",
+          "expected": "7",
+          "argmax": " ",
+          "rank": 1787
+        },
+        {
+          "prompt": "Each box has 4 balls and there are 2 boxes. The total number of balls is",
+          "expected": "8",
+          "argmax": " ",
+          "rank": 639
+        },
+        {
+          "prompt": "A farmer has 4 sheep and buys 4 more sheep. The farmer now has",
+          "expected": "8",
+          "argmax": " _____",
+          "rank": 2128
+        }
+      ],
+      "ctrl_rows": [
+        {
+          "prompt": "Each box has 3 balls and there are 2 boxes. The total number of balls is",
+          "expected": "6",
+          "argmax": " ",
+          "rank": 395
+        },
+        {
+          "prompt": "A farmer has 7 sheep and buys 2 more sheep. The farmer now has",
+          "expected": "9",
+          "argmax": " _____",
+          "rank": 2229
+        },
+        {
+          "prompt": "Here are 6 apples and here are 3 apples. Altogether there are",
+          "expected": "9",
+          "argmax": " ",
+          "rank": 21
+        },
+        {
+          "prompt": "The list is 2 2 2 2 2. The number of items in the list is",
+          "expected": "5",
+          "argmax": " ",
+          "rank": 115
+        }
+      ],
+      "argmax_to_four": 0,
+      "argmax_changed": 2,
+      "ctrl_changed": 0
+    },
+    {
+      "name": "rand128",
+      "five_rows": [
+        {
+          "prompt": "The list is 5 5 5 5 5. The number of items in the list is",
+          "donor": "The list is 4 4 4 4 4. The number of items in the list is",
+          "five_answer": "5",
+          "four_answer": "4",
+          "argmax": " ",
+          "five_rank": 118,
+          "four_rank": 353,
+          "direction": -2.0625
+        },
+        {
+          "prompt": "I count 5 5 5 and one more 5. The total is",
+          "donor": "I count 4 4 4 and one more 4. The total is",
+          "five_answer": "4",
+          "four_answer": "3",
+          "argmax": " ",
+          "five_rank": 278,
+          "four_rank": 284,
+          "direction": -0.0625
+        },
+        {
+          "prompt": "Here are 5 apples and here are 5 apples. Altogether there are",
+          "donor": "Here are 4 apples and here are 4 apples. Altogether there are",
+          "five_answer": "10",
+          "four_answer": "8",
+          "argmax": " ",
+          "five_rank": 17,
+          "four_rank": 485,
+          "direction": -6.0
+        },
+        {
+          "prompt": "5 5 5 5 5 5 5 - the count of numbers shown is",
+          "donor": "4 4 4 4 4 4 4 - the count of numbers shown is",
+          "five_answer": "7",
+          "four_answer": "7",
+          "argmax": " ",
+          "five_rank": 1135,
+          "four_rank": 1135,
+          "direction": 0.0
+        },
+        {
+          "prompt": "Each box has 5 balls and there are 2 boxes. The total number of balls is",
+          "donor": "Each box has 4 balls and there are 2 boxes. The total number of balls is",
+          "five_answer": "10",
+          "four_answer": "8",
+          "argmax": " _____",
+          "five_rank": 198,
+          "four_rank": 627,
+          "direction": -2.34375
+        },
+        {
+          "prompt": "A farmer has 5 sheep and buys 5 more sheep. The farmer now has",
+          "donor": "A farmer has 4 sheep and buys 4 more sheep. The farmer now has",
+          "five_answer": "10",
+          "four_answer": "8",
+          "argmax": " ",
+          "five_rank": 951,
+          "four_rank": 2499,
+          "direction": -1.75
+        }
+      ],
+      "four_rows": [
+        {
+          "prompt": "The list is 4 4 4 4 4. The number of items in the list is",
+          "expected": "4",
+          "argmax": " ",
+          "rank": 317
+        },
+        {
+          "prompt": "I count 4 4 4 and one more 4. The total is",
+          "expected": "3",
+          "argmax": " ",
+          "rank": 391
+        },
+        {
+          "prompt": "Here are 4 apples and here are 4 apples. Altogether there are",
+          "expected": "8",
+          "argmax": " ",
+          "rank": 47
+        },
+        {
+          "prompt": "4 4 4 4 4 4 4 - the count of numbers shown is",
+          "expected": "7",
+          "argmax": " ",
+          "rank": 1787
+        },
+        {
+          "prompt": "Each box has 4 balls and there are 2 boxes. The total number of balls is",
+          "expected": "8",
+          "argmax": " ",
+          "rank": 639
+        },
+        {
+          "prompt": "A farmer has 4 sheep and buys 4 more sheep. The farmer now has",
+          "expected": "8",
+          "argmax": " _____",
+          "rank": 2128
+        }
+      ],
+      "ctrl_rows": [
+        {
+          "prompt": "Each box has 3 balls and there are 2 boxes. The total number of balls is",
+          "expected": "6",
+          "argmax": " ",
+          "rank": 395
+        },
+        {
+          "prompt": "A farmer has 7 sheep and buys 2 more sheep. The farmer now has",
+          "expected": "9",
+          "argmax": " _____",
+          "rank": 2229
+        },
+        {
+          "prompt": "Here are 6 apples and here are 3 apples. Altogether there are",
+          "expected": "9",
+          "argmax": " ",
+          "rank": 21
+        },
+        {
+          "prompt": "The list is 2 2 2 2 2. The number of items in the list is",
+          "expected": "5",
+          "argmax": " ",
+          "rank": 115
+        }
+      ],
+      "argmax_to_four": 0,
+      "argmax_changed": 0,
+      "ctrl_changed": 0
+    },
+    {
+      "name": "restored",
+      "five_rows": [
+        {
+          "prompt": "The list is 5 5 5 5 5. The number of items in the list is",
+          "donor": "The list is 4 4 4 4 4. The number of items in the list is",
+          "five_answer": "5",
+          "four_answer": "4",
+          "argmax": " ",
+          "five_rank": 119,
+          "four_rank": 366,
+          "direction": -2.125
+        },
+        {
+          "prompt": "I count 5 5 5 and one more 5. The total is",
+          "donor": "I count 4 4 4 and one more 4. The total is",
+          "five_answer": "4",
+          "four_answer": "3",
+          "argmax": " ",
+          "five_rank": 283,
+          "four_rank": 293,
+          "direction": -0.0625
+        },
+        {
+          "prompt": "Here are 5 apples and here are 5 apples. Altogether there are",
+          "donor": "Here are 4 apples and here are 4 apples. Altogether there are",
+          "five_answer": "10",
+          "four_answer": "8",
+          "argmax": " ",
+          "five_rank": 20,
+          "four_rank": 526,
+          "direction": -6.0625
+        },
+        {
+          "prompt": "5 5 5 5 5 5 5 - the count of numbers shown is",
+          "donor": "4 4 4 4 4 4 4 - the count of numbers shown is",
+          "five_answer": "7",
+          "four_answer": "7",
+          "argmax": " ",
+          "five_rank": 1165,
+          "four_rank": 1165,
+          "direction": 0.0
+        },
+        {
+          "prompt": "Each box has 5 balls and there are 2 boxes. The total number of balls is",
+          "donor": "Each box has 4 balls and there are 2 boxes. The total number of balls is",
+          "five_answer": "10",
+          "four_answer": "8",
+          "argmax": " _____",
+          "five_rank": 202,
+          "four_rank": 675,
+          "direction": -2.4375
+        },
+        {
+          "prompt": "A farmer has 5 sheep and buys 5 more sheep. The farmer now has",
+          "donor": "A farmer has 4 sheep and buys 4 more sheep. The farmer now has",
+          "five_answer": "10",
+          "four_answer": "8",
+          "argmax": " ",
+          "five_rank": 851,
+          "four_rank": 2250,
+          "direction": -1.8125
+        }
+      ],
+      "four_rows": [
+        {
+          "prompt": "The list is 4 4 4 4 4. The number of items in the list is",
+          "expected": "4",
+          "argmax": " ",
+          "rank": 317
+        },
+        {
+          "prompt": "I count 4 4 4 and one more 4. The total is",
+          "expected": "3",
+          "argmax": " ",
+          "rank": 391
+        },
+        {
+          "prompt": "Here are 4 apples and here are 4 apples. Altogether there are",
+          "expected": "8",
+          "argmax": " ",
+          "rank": 47
+        },
+        {
+          "prompt": "4 4 4 4 4 4 4 - the count of numbers shown is",
+          "expected": "7",
+          "argmax": " ",
+          "rank": 1787
+        },
+        {
+          "prompt": "Each box has 4 balls and there are 2 boxes. The total number of balls is",
+          "expected": "8",
+          "argmax": " ",
+          "rank": 639
+        },
+        {
+          "prompt": "A farmer has 4 sheep and buys 4 more sheep. The farmer now has",
+          "expected": "8",
+          "argmax": " _____",
+          "rank": 2128
+        }
+      ],
+      "ctrl_rows": [
+        {
+          "prompt": "Each box has 3 balls and there are 2 boxes. The total number of balls is",
+          "expected": "6",
+          "argmax": " ",
+          "rank": 395
+        },
+        {
+          "prompt": "A farmer has 7 sheep and buys 2 more sheep. The farmer now has",
+          "expected": "9",
+          "argmax": " _____",
+          "rank": 2229
+        },
+        {
+          "prompt": "Here are 6 apples and here are 3 apples. Altogether there are",
+          "expected": "9",
+          "argmax": " ",
+          "rank": 21
+        },
+        {
+          "prompt": "The list is 2 2 2 2 2. The number of items in the list is",
+          "expected": "5",
+          "argmax": " ",
+          "rank": 115
+        }
+      ],
+      "argmax_to_four": 0,
+      "argmax_changed": 0,
+      "ctrl_changed": 0
+    }
+  ],
+  "restoration": {
+    "bit_exact": false,
+    "max_diff": 2.4267578125
+  },
+  "seconds": 122.87991499900818
+}
